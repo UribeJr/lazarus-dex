@@ -31,6 +31,7 @@ python3 scripts/shots.py       # Chromium + Firefox, desktop + 390px, console-er
 Deploy: a static Vercel site plus a zero-build function `api/snooze.js`. It reads `GROQ_API_KEY`, plus the optional `SNOOZE_MODELS` and `SNOOZE_ORIGINS`.
 
 ## Credits
+The MIT license covers this project's code only. It does not cover the encounter data, the Pokémon data or the sprites.
 - Encounter data: **[pokemonlazarus.net](https://pokemonlazarus.net/pokemon-locations/)**, an independent community resource. *Pokémon Lazarus* is created by **Nemo622**. The site has no explicit license for its data, so this project credits and links it and keeps one dated snapshot. Corrections go to them.
 - Pokémon data and sprites: **[PokeAPI](https://pokeapi.co)** / [PokeAPI/sprites](https://github.com/PokeAPI/sprites).
 - Fonts: Press Start 2P and VT323 (SIL OFL) via Google Fonts.
