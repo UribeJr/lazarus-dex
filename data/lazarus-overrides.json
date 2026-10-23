@@ -4,5 +4,62 @@
   "tradeToLinkCable": "Lazarus: trade evolutions use the Linking Cord (Sofos City, Green Shard Exchange) instead of a trade.",
   "source": "https://pokemonlazarus.net/evolutionary-items-location/ (fetched 2026-10-23)"
  },
- "evolutions": {}
+ "evolutions": {
+  "silvally": {
+   "how": "Lv 40",
+   "note": "Lazarus v1.x changelog: Type: Null evolves into Silvally at Level 40 instead of through Friendship.",
+   "source": "https://pokemonlazarus.net/full-changelog/"
+  }
+ },
+ "items": {
+  "source": "https://pokemonlazarus.net/evolutionary-items-location/ (fetched 2026-10-23)",
+  "where": {
+   "thunder-stone": "Sofos City – Yellow Shard Exchange",
+   "fire-stone": "Sofos City – Red Shard Exchange; Palati City – Quest",
+   "water-stone": "Riverwalk Trail South (Surf); Sofos City – Blue Shard Exchange",
+   "sun-stone": "Sofos City – Red Shard Exchange",
+   "moon-stone": "Froslass Cavern BF1; Sofos City – Blue Shard Exchange",
+   "leaf-stone": "Sofos City – Green Shard Exchange",
+   "ice-stone": "Pythios Cemetery – Quest; Sofos City – Blue Shard Exchange",
+   "shiny-stone": "Acrisia Mountains (Surf); Sofos City – Yellow Shard Exchange",
+   "dusk-stone": "Acrisia Mountains – Quest; Sofos City – Green Shard Exchange",
+   "dawn-stone": "Sofos City – Yellow Shard Exchange",
+   "kings-rock": "Acrisia City; Sea of Asteri",
+   "linking-cord": "Sofos City – Green Shard Exchange",
+   "metal-coat": "Sofos City – Red Shard Exchange",
+   "razor-fang": "Wanderer’s Woods (Surf); Sea of Vulcai",
+   "razor-claw": "Fresco Isles; Nyx Trails",
+   "black-augurite": "Marmaro Island – girl inside the Fossil House",
+   "reaper-cloth": "Myrrini Island – Quest",
+   "tart-apple": "Sofos City – Street Vendor",
+   "sweet-apple": "Sofos City – Street Vendor",
+   "syrupy-apple": "Sofos City – Street Vendor",
+   "auspicious-armor": "Kaptara Island",
+   "malicious-armor": "Kaptara Island",
+   "deep-sea-scale": "Sea of Asteri – Underwater",
+   "deep-sea-tooth": "Sea of Vulcai – Underwater"
+  }
+ },
+ "megas": {
+  "_note": "Only Mega forms whose stone is documented on pokemonlazarus.net. Niko sells more Mega Stones as the story progresses but the site does not list them.",
+  "ampharos-mega": {
+   "name": "Mega Ampharos",
+   "base": "ampharos",
+   "how": "hold the Ampharosite (Niko, Acrisia University, after Gym Badge 3)",
+   "source": "https://pokemonlazarus.net/acrisia-university-rewards/"
+  }
+ },
+ "regionalOnly": {
+  "_note": "Species that only evolve from a regional form (PokeAPI chains don't encode form).",
+  "perrserker": "galar",
+  "obstagoon": "galar",
+  "cursola": "galar",
+  "sirfetchd": "galar",
+  "mr-rime": "galar",
+  "runerigus": "galar",
+  "sneasler": "hisui",
+  "overqwil": "hisui",
+  "basculegion": "white-striped",
+  "clodsire": "paldea"
+ }
 }

@@ -28,12 +28,13 @@ function find(q) {
   return { mons: mons.slice(0, 3), areas: areas.slice(0, 3), missing };
 }
 const how = l => l.method === 'fishing' ? `${l.rod} Rod` : l.method === 'surfing' ? 'Surf' : l.method === 'underwater' ? 'Underwater' : `Land (${l.method})`;
+const obt = p => { const o = p.obtain; if (!o || !/evolution|mega/.test(o.type)) return ''; return `${o.type === 'mega' ? 'Mega Evolve' : 'evolve'} from ${o.fromName} (${o.how})${o.item ? '; ' + o.item : ''}${o.confirmed ? ' [Lazarus-confirmed]' : ' [standard method, not confirmed for Lazarus]'}`; };
 function monFacts(p) {
   const L = (p.locations || []).slice().sort((a, b) => b.rate - a.rate);
   const evo = p.evolutions.filter(e => e.how).map(e => `${e.name} via ${e.how}${e.lazarus ? ' [Lazarus]' : ''}`).join('; ');
   return `${p.name} (#${p.nationalNo}, ${p.types.join('/')})` +
     (L.length ? ` — wild: ${L.map(l => `${l.areaName}: ${how(l)} ${l.rate}%`).join('; ')}` : ' — NOT in any wild encounter table') +
-    (p.special ? ` — special: ${p.special}` : '') + (evo ? ` — evolutions: ${evo}` : '');
+    (p.special ? ` — special: ${p.special}` : '') + (obt(p) ? ` — how to obtain: ${obt(p)}` : '') + (evo ? ` — evolutions: ${evo}` : '');
 }
 function areaFacts(a) { return `${a.name}: ` + a.groups.map(g => `${g.label}: ` + g.encounters.map(e => `${e.name} ${e.rate}%${e.rod ? ' ' + e.rod + ' Rod' : ''}`).join(', ')).join(' | '); }
 const src = (mons, areas) => [...mons.map(p => ({ kind: 'mon', id: p.id, t: p.name })), ...areas.map(a => ({ kind: 'area', id: a.id, t: a.name }))];
@@ -43,6 +44,7 @@ function computed(q, f) {
   if (f.mons.length) {
     const parts = f.mons.map(p => {
       const L = (p.locations || []).slice().sort((a, b) => b.rate - a.rate);
+      if (!L.length && obt(p)) return `${p.name} isn't in any wild table — ${obt(p).replace(/^evolve/, 'evolve it')}.`;
       if (!L.length) return p.special ? `${p.name} isn't in the wild tables — ${p.special}` : `${p.name} isn't in any Lazarus wild encounter table I have.`;
       const top = L.slice(0, 6).map(l => `${l.areaName} (${how(l)}, ${l.rate}%)`);
       return `${p.name}: ${top.join(', ')}${L.length > 6 ? ` …and ${L.length - 6} more spots in the dex entry` : ''}.`;
@@ -74,7 +76,7 @@ function limited(ip) {
 
 const SYS = `You are "Prof. Snooze", a very sleepy, slow, kind Pokémon professor in a fan-made Pokémon Lazarus dex (Ilios region).
 Rules:
-- Use ONLY the DEX FACTS given. Never invent Pokémon, areas, rates, rods or methods. If the facts don't answer it, say you only know the Lazarus encounter tables.
+- Use ONLY the DEX FACTS given. Never invent Pokémon, areas, rates, rods or methods. If the facts don't answer it, say you only know the Lazarus encounter tables and evolutions. For Pokémon with no wild locations, explain the 'how to obtain' fact (evolve from X via method) and never suggest an area; keep the 'not confirmed for Lazarus' caveat when present.
 - Every area or rate you mention must appear verbatim in the facts. Prefer the highest rates first.
 - 2–4 short sentences, plain text, no markdown. Be lazy and cozy (a yawn, a nap joke) but accurate.
 - Off-topic questions: one sleepy sentence steering back to Lazarus Pokémon and areas.`;

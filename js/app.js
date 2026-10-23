@@ -8,7 +8,7 @@ const pretty = s => cap(String(s).replace(/-/g, ' '));
 const SPR = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
 const TYPES = ['normal','fire','water','electric','grass','ice','fighting','poison','ground','flying','psychic','bug','rock','ghost','dragon','dark','steel','fairy'];
 let DEX, BY = {}, BYSPECIES = {}, AREAS = {};
-const state = { slow: true, napping: false, area: null, mon: null, filter: 'all' };
+const state = { slow: true, napping: false, area: null, mon: null, filter: 'all', scope: 'all' };
 
 // ---------- sprites: Gen 5 animated GIF -> static PNG -> placeholder; integer scaling only ----------
 function spriteSources(p) {
@@ -54,6 +54,13 @@ function renderEntry(p) {
   let h = '<h3>▸ LOCATIONS (LAZARUS)</h3>';
   if (L.length) h += `<table><thead><tr><th>AREA</th><th>TIME</th><th>METHOD</th><th>RATE</th></tr></thead><tbody>${L.map(l => `<tr><td><a href="#/area/${l.area}">${esc(l.areaName)}</a></td><td>${timeLabel(l)}</td><td>${methodLabel(l)}${l.rod ? ' · ' + l.rod + ' Rod' : ''}</td><td class="p">${l.rate}%</td></tr>`).join('')}</tbody></table>`;
   else h += '<p class="empty">Not in any wild encounter table.</p>';
+  const o = p.obtain || {};
+  if (o.type === 'evolution' || o.type === 'mega') {
+    const f = BY[o.fromId];
+    h += `<h3>▸ HOW TO OBTAIN</h3><p class="obtain"><b class="k">${o.type === 'mega' ? 'MEGA EVOLVE' : 'EVOLVE'}:</b> from ${f ? `<a href="#/mon/${f.id}">${esc(f.name)}</a>` : esc(o.fromName)} — ${esc(pretty(o.how))}</p>` +
+      (o.item ? `<p class="obtain"><b class="k">ITEM:</b> ${esc(o.item)}</p>` : '') +
+      `<p class="${o.confirmed ? 'verified' : 'unconf'}">${o.confirmed ? '✓ LAZARUS' : '? '}${o.confirmed ? (o.note ? ' · ' + esc(o.note) : '') : 'Standard method, not confirmed for Lazarus.'}</p>`;
+  }
   if (p.special) h += `<p><b class="k">SPECIAL:</b> ${esc(p.special)}</p>`;
   // stats + abilities
   const SN = { hp: 'HP', attack: 'ATK', defense: 'DEF', 'special-attack': 'SP.A', 'special-defense': 'SP.D', speed: 'SPE' };
@@ -65,8 +72,12 @@ function renderEntry(p) {
   // evolutions
   const evo = p.evolutions;
   h += '<h3>▸ EVOLUTION</h3><div class="evo">' + evo.map(e => {
-    const inDex = BYSPECIES[e.speciesId]; const name = inDex ? inDex.name : pretty(e.name);
-    const st = `<span class="st${inDex ? '' : ' off'}" title="${inDex ? '' : 'Not obtainable in the wild in Lazarus'}">${inDex ? `<a href="#/mon/${inDex.id}">${esc(name)}</a>` : esc(name)}${e.lazarus ? `<span class="lz" title="${esc(e.note)}">LZ</span>` : ''}</span>`;
+    const reg = (p.name.match(/^(Alolan|Galarian|Hisuian|Paldean)\b/) || [])[1];
+    const cands = DEX.pokemon.filter(x => x.speciesId === e.speciesId && x.obtain?.type !== 'mega');
+    const inDex = (e.speciesId === p.speciesId && p.obtain?.type !== 'mega' ? p : null) || (reg && cands.find(x => x.name.startsWith(reg))) || cands.find(x => !/^(Alolan|Galarian|Hisuian|Paldean) /.test(x.name)) || cands[0];
+    if (e.speciesId === p.speciesId && p.obtain?.type === 'evolution') e = { ...e, how: p.obtain.how };
+    const name = inDex ? inDex.name : pretty(e.name);
+    const st = `<span class="st${inDex ? '' : ' off'}" title="${inDex ? '' : 'Not obtainable in Lazarus'}">${inDex ? `<a href="#/mon/${inDex.id}">${esc(name)}</a>` : esc(name)}${e.lazarus ? `<span class="lz" title="${esc(e.note)}">LZ</span>` : ''}</span>`;
     return (e.how ? `<span>→ ${esc(pretty(e.how))}</span>` : '') + st;
   }).join(' ') + '</div>';
   if (evo.some(e => e.lazarus)) h += '<p class="empty" style="font-size:18px">LZ = Lazarus override: trade evolutions use the Linking Cord (Sofos City Green Shard Exchange).</p>';
@@ -89,19 +100,21 @@ function renderList() {
   state.area = null; $('#areaCap').textContent = '▣ DEX LIST & AREAS';
   const s = $('#side');
   s.innerHTML = `<input class="search" id="find" type="search" placeholder="Search Pokémon or area…" aria-label="Search Pokémon or area">
-    <div class="seg" role="group" aria-label="List">${['all', 'pokemon', 'areas'].map(f => `<button data-f="${f}" aria-pressed="${state.filter === f}">${f.toUpperCase()}</button>`).join('')}</div><div id="results"></div>`;
+    <div class="seg" role="group" aria-label="List">${['all', 'pokemon', 'areas'].map(f => `<button data-f="${f}" aria-pressed="${state.filter === f}">${f.toUpperCase()}</button>`).join('')}</div><div class="seg" role="group" aria-label="Pokémon scope">${[['all', 'ALL DEX'], ['wild', 'WILD/GIFT'], ['evo', 'EVOLVE']].map(([k, l]) => `<button data-s="${k}" aria-pressed="${state.scope === k}">${l}</button>`).join('')}</div>
+    <p class="count">${DEX.counts ? `${DEX.counts.entries} ENTRIES · ${DEX.counts.species} SPECIES` : ''}</p><div id="results"></div>`;
   const draw = () => {
     const q = $('#find').value.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     const m = x => x.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(q);
     const areas = state.filter !== 'pokemon' ? DEX.areas.filter(a => !q || m(a.name)) : [];
-    const mons = state.filter !== 'areas' ? DEX.pokemon.filter(p => !q || m(p.name) || String(p.nationalNo) === q || p.types.some(t => t === q)) : [];
+    const mons = state.filter !== 'areas' ? DEX.pokemon.filter(p => (state.scope === 'all' || (state.scope === 'evo') === /evolution|mega/.test(p.obtain?.type || ''))).filter(p => !q || m(p.name) || String(p.nationalNo) === q || p.types.some(t => t === q)) : [];
     $('#results').innerHTML = (areas.length ? `<h3>▸ AREAS (${areas.length})</h3><ul class="list">${areas.map(a => `<li><a href="#/area/${a.id}"><span>${esc(a.name)}</span><b>${a.groups.reduce((n, g) => n + g.encounters.length, 0)}</b></a></li>`).join('')}</ul>` : '') +
-      (mons.length ? `<h3>▸ POKÉMON (${mons.length})</h3><ul class="list">${mons.slice(0, 400).map(p => `<li><a href="#/mon/${p.id}" data-id="${p.id}"><img src="${iconSrc(p)}" alt="" loading="lazy" width="32" height="32"><span style="flex:1">${esc(p.name)}</span><b>${String(p.nationalNo).padStart(3, '0')}</b></a></li>`).join('')}</ul>` : '') ||
+      (mons.length ? `<h3>▸ POKÉMON (${mons.length})</h3><ul class="list">${mons.map(p => `<li><a href="#/mon/${p.id}" data-id="${p.id}"><img src="${iconSrc(p)}" alt="" loading="lazy" width="32" height="32"><span style="flex:1">${esc(p.name)}${/evolution|mega/.test(p.obtain?.type) ? ' <i title="Obtained by evolution">EVO</i>' : ''}</span><b>${String(p.nationalNo).padStart(3, '0')}</b></a></li>`).join('')}</ul>` : '') ||
       '<p class="empty">Nothing here… even the Slakoth gave up looking.</p>';
     hideBrokenIcons($('#results'));
   };
   $('#find').addEventListener('input', draw);
-  $$('.seg button', s).forEach(b => b.onclick = () => { state.filter = b.dataset.f; $$('.seg button', s).forEach(x => x.setAttribute('aria-pressed', x === b)); draw(); });
+  $$('.seg button[data-f]', s).forEach(b => b.onclick = () => { state.filter = b.dataset.f; $$('.seg button[data-f]', s).forEach(x => x.setAttribute('aria-pressed', x === b)); draw(); });
+  $$('.seg button[data-s]', s).forEach(b => b.onclick = () => { state.scope = b.dataset.s; $$('.seg button[data-s]', s).forEach(x => x.setAttribute('aria-pressed', x === b)); draw(); });
   draw();
 }
 function hideBrokenIcons(r) { $$('img', r).forEach(i => i.addEventListener('error', () => { i.style.visibility = 'hidden'; }, { once: true })); }
@@ -164,7 +177,7 @@ async function init() {
   const r = await fetch('data/dex.json'); DEX = await r.json();
   DEX.pokemon.forEach(p => { BY[p.id] = p; if (!BYSPECIES[p.speciesId]) BYSPECIES[p.speciesId] = p; }); DEX.areas.forEach(a => AREAS[a.id] = a);
   const hello = bubble('', '');
-  hello.textContent = "*yaaawn*… oh, a trainer. I'm Prof. Snooze. I know every wild encounter in the Ilios region — slowly. Ask me something:";
+  hello.textContent = "*yaaawn*… oh, a trainer. I'm Prof. Snooze. I know every wild encounter and evolution in the Ilios region — slowly. Ask me something:";
   hello.insertAdjacentHTML('beforeend', `<span class="chips">${['Where do I catch Dratini?', "What's in Pythios Cemetery?", 'Where is Gengar?'].map(q => `<button class="chip" type="button">${esc(q)}</button>`).join('')}</span>`);
   $$('.chip', hello).forEach(c => c.onclick = ev => { ev.stopPropagation(); ask(c.textContent); });
   renderList();

@@ -112,3 +112,6 @@ body.nap .dev{filter:brightness(.6)}
 #side .list a span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
 #side .cols .list a{font-size:18px}#side .cols .list img{width:24px;height:24px}
 @media (max-width:720px){.cols{grid-template-columns:minmax(0,1fr)}}
+.unconf{font-family:"Press Start 2P";font-size:8px;margin-top:8px;line-height:1.6;color:var(--ink2)}
+.obtain{overflow-wrap:anywhere}
+.count{font-family:"Press Start 2P";font-size:8px;margin:0 0 6px;color:var(--ink2)}

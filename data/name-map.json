@@ -1601,6 +1601,18 @@
   "speciesId": 286,
   "form": null
  },
+ "Pyroar M": {
+  "slug": "pyroar-male",
+  "pokeapiId": 668,
+  "speciesId": 668,
+  "form": "Pyroar M"
+ },
+ "Pyroar F": {
+  "slug": "pyroar-male",
+  "pokeapiId": 668,
+  "speciesId": 668,
+  "form": "Pyroar F"
+ },
  "Armarouge": {
   "slug": "armarouge",
   "pokeapiId": 936,
@@ -1996,17 +2008,5 @@
   "pokeapiId": 244,
   "speciesId": 244,
   "form": null
- },
- "Pyroar F": {
-  "slug": "pyroar-male",
-  "pokeapiId": 668,
-  "speciesId": 668,
-  "form": "Pyroar F"
- },
- "Pyroar M": {
-  "slug": "pyroar-male",
-  "pokeapiId": 668,
-  "speciesId": 668,
-  "form": "Pyroar M"
  }
 }
