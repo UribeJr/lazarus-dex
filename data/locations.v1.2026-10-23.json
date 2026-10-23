@@ -1,0 +1,5457 @@
+{
+ "schema": 1,
+ "source": "https://pokemonlazarus.net/pokemon-locations/",
+ "credit": "pokemonlazarus.net (Pokémon Lazarus by Nemo622)",
+ "fetched": "2026-10-23",
+ "sha256": "ed3ae23e0a12a2f3",
+ "areas": [
+  {
+   "id": "acrisia-city",
+   "index": 1,
+   "name": "Acrisia City",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Pikipek",
+       "rate": 20
+      },
+      {
+       "name": "Sandshrew",
+       "rate": 20
+      },
+      {
+       "name": "Poliwag",
+       "rate": 10
+      },
+      {
+       "name": "Shroomish",
+       "rate": 10
+      },
+      {
+       "name": "Ducklett",
+       "rate": 10
+      },
+      {
+       "name": "Phanpy",
+       "rate": 10
+      },
+      {
+       "name": "Grimer",
+       "rate": 5
+      },
+      {
+       "name": "Pansage",
+       "rate": 5
+      },
+      {
+       "name": "Pansear",
+       "rate": 5
+      },
+      {
+       "name": "Panpour",
+       "rate": 5
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Hoothoot",
+       "rate": 20
+      },
+      {
+       "name": "Sandshrew",
+       "rate": 20
+      },
+      {
+       "name": "Poliwag",
+       "rate": 10
+      },
+      {
+       "name": "Shroomish",
+       "rate": 10
+      },
+      {
+       "name": "Munna",
+       "rate": 10
+      },
+      {
+       "name": "Phanpy",
+       "rate": 10
+      },
+      {
+       "name": "Alolan Grimer",
+       "rate": 5
+      },
+      {
+       "name": "Pansage",
+       "rate": 5
+      },
+      {
+       "name": "Pansear",
+       "rate": 5
+      },
+      {
+       "name": "Panpour",
+       "rate": 5
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Wimpod",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Poliwag",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Wooper",
+       "rate": 40,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Remoraid",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "White-Striped Basculin",
+       "rate": 20,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Wimpod",
+       "rate": 60
+      },
+      {
+       "name": "Remoraid",
+       "rate": 30
+      },
+      {
+       "name": "Finneon",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bronze-fields-north",
+   "index": 2,
+   "name": "Bronze Fields (North)",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Lillipup",
+       "rate": 20
+      },
+      {
+       "name": "Pikipek",
+       "rate": 20
+      },
+      {
+       "name": "Nincada",
+       "rate": 20
+      },
+      {
+       "name": "Hoppip",
+       "rate": 10
+      },
+      {
+       "name": "Grubbin",
+       "rate": 10
+      },
+      {
+       "name": "Bellsprout",
+       "rate": 5
+      },
+      {
+       "name": "Cubone",
+       "rate": 5
+      },
+      {
+       "name": "Phanpy",
+       "rate": 5
+      },
+      {
+       "name": "Ducklett",
+       "rate": 5
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Lillipup",
+       "rate": 20
+      },
+      {
+       "name": "Hoothoot",
+       "rate": 20
+      },
+      {
+       "name": "Paras",
+       "rate": 20
+      },
+      {
+       "name": "Hoppip",
+       "rate": 10
+      },
+      {
+       "name": "Grubbin",
+       "rate": 10
+      },
+      {
+       "name": "Murkrow",
+       "rate": 5
+      },
+      {
+       "name": "Cubone",
+       "rate": 5
+      },
+      {
+       "name": "Phanpy",
+       "rate": 5
+      },
+      {
+       "name": "Ducklett",
+       "rate": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bronze-fields-south",
+   "index": 3,
+   "name": "Bronze Fields (South)",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Mareep",
+       "rate": 20
+      },
+      {
+       "name": "Lillipup",
+       "rate": 20
+      },
+      {
+       "name": "Hoppip",
+       "rate": 10
+      },
+      {
+       "name": "Cutiefly",
+       "rate": 10
+      },
+      {
+       "name": "Fomantis",
+       "rate": 10
+      },
+      {
+       "name": "Nincada",
+       "rate": 10
+      },
+      {
+       "name": "Mudbray",
+       "rate": 9
+      },
+      {
+       "name": "Comfey",
+       "rate": 5
+      },
+      {
+       "name": "Grubbin",
+       "rate": 4
+      },
+      {
+       "name": "Cubone",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Mareep",
+       "rate": 20
+      },
+      {
+       "name": "Lillipup",
+       "rate": 20
+      },
+      {
+       "name": "Murkrow",
+       "rate": 20
+      },
+      {
+       "name": "Vullaby",
+       "rate": 10
+      },
+      {
+       "name": "Nincada",
+       "rate": 10
+      },
+      {
+       "name": "Mudbray",
+       "rate": 9
+      },
+      {
+       "name": "Yamper",
+       "rate": 5
+      },
+      {
+       "name": "Grubbin",
+       "rate": 4
+      },
+      {
+       "name": "Cubone",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jusmail-town",
+   "index": 4,
+   "name": "Jusmail Town",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Wurmple",
+       "rate": 20
+      },
+      {
+       "name": "Pikipek",
+       "rate": 20
+      },
+      {
+       "name": "Cutiefly",
+       "rate": 20
+      },
+      {
+       "name": "Bounsweet",
+       "rate": 10
+      },
+      {
+       "name": "Eevee",
+       "rate": 10
+      },
+      {
+       "name": "Skiddo",
+       "rate": 10
+      },
+      {
+       "name": "Growlithe",
+       "rate": 4
+      },
+      {
+       "name": "Hisuian Growlithe",
+       "rate": 4
+      },
+      {
+       "name": "Oricorio Baile",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Wurmple",
+       "rate": 20
+      },
+      {
+       "name": "Woobat",
+       "rate": 20
+      },
+      {
+       "name": "Voltorb",
+       "rate": 10
+      },
+      {
+       "name": "Hisuian Voltorb",
+       "rate": 10
+      },
+      {
+       "name": "Ralts",
+       "rate": 10
+      },
+      {
+       "name": "Eevee",
+       "rate": 10
+      },
+      {
+       "name": "Skiddo",
+       "rate": 10
+      },
+      {
+       "name": "Vulpix",
+       "rate": 4
+      },
+      {
+       "name": "Alolan Vulpix",
+       "rate": 4
+      },
+      {
+       "name": "Oricorio Baile",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acrisia-mountains",
+   "index": 5,
+   "name": "Acrisia Mountains",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Sandshrew",
+       "rate": 20
+      },
+      {
+       "name": "Rockruff",
+       "rate": 20
+      },
+      {
+       "name": "Nosepass",
+       "rate": 10
+      },
+      {
+       "name": "Vullaby",
+       "rate": 10
+      },
+      {
+       "name": "Woobat",
+       "rate": 10
+      },
+      {
+       "name": "Timburr",
+       "rate": 10
+      },
+      {
+       "name": "Aron",
+       "rate": 8
+      },
+      {
+       "name": "Mankey",
+       "rate": 5
+      },
+      {
+       "name": "Mawile",
+       "rate": 5
+      },
+      {
+       "name": "Klawf",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Sandshrew",
+       "rate": 20
+      },
+      {
+       "name": "Rockruff",
+       "rate": 20
+      },
+      {
+       "name": "Alolan Sandshrew",
+       "rate": 10
+      },
+      {
+       "name": "Vullaby",
+       "rate": 10
+      },
+      {
+       "name": "Woobat",
+       "rate": 10
+      },
+      {
+       "name": "Timburr",
+       "rate": 10
+      },
+      {
+       "name": "Klawf",
+       "rate": 10
+      },
+      {
+       "name": "Mankey",
+       "rate": 5
+      },
+      {
+       "name": "Mawile",
+       "rate": 5
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Wimpod",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Poliwag",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Wooper",
+       "rate": 40,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Remoraid",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "White-Striped Basculin",
+       "rate": 20,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Wimpod",
+       "rate": 60
+      },
+      {
+       "name": "Remoraid",
+       "rate": 30
+      },
+      {
+       "name": "Finneon",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acrisia-mountains-peak",
+   "index": 6,
+   "name": "Acrisia Mountains (Peak)",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Flittle",
+       "rate": 20
+      },
+      {
+       "name": "Pichu",
+       "rate": 20
+      },
+      {
+       "name": "Flabebe Red Flower",
+       "rate": 10
+      },
+      {
+       "name": "Flabebe Blue Flower",
+       "rate": 10
+      },
+      {
+       "name": "Flabebe Orange Flower",
+       "rate": 10
+      },
+      {
+       "name": "Flabebe White Flower",
+       "rate": 10
+      },
+      {
+       "name": "Flabebe Yellow Flower",
+       "rate": 10
+      },
+      {
+       "name": "Snover",
+       "rate": 10
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Flittle",
+       "rate": 20
+      },
+      {
+       "name": "Spinarak",
+       "rate": 20
+      },
+      {
+       "name": "Pichu",
+       "rate": 10
+      },
+      {
+       "name": "Bronzor",
+       "rate": 10
+      },
+      {
+       "name": "Rockruff",
+       "rate": 10
+      },
+      {
+       "name": "Dedenne",
+       "rate": 10
+      },
+      {
+       "name": "Skiddo",
+       "rate": 10
+      },
+      {
+       "name": "Snover",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "riverwalk-trail-west",
+   "index": 7,
+   "name": "Riverwalk Trail (West)",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Aron",
+       "rate": 20
+      },
+      {
+       "name": "Ponyta",
+       "rate": 20
+      },
+      {
+       "name": "Meditite",
+       "rate": 10
+      },
+      {
+       "name": "Litleo",
+       "rate": 10
+      },
+      {
+       "name": "Cutiefly",
+       "rate": 10
+      },
+      {
+       "name": "Mudbray",
+       "rate": 10
+      },
+      {
+       "name": "Yamper",
+       "rate": 8
+      },
+      {
+       "name": "Sandile",
+       "rate": 5
+      },
+      {
+       "name": "Gligar",
+       "rate": 5
+      },
+      {
+       "name": "Jangmo-o",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Aron",
+       "rate": 20
+      },
+      {
+       "name": "Galarian Ponyta",
+       "rate": 20
+      },
+      {
+       "name": "Meditite",
+       "rate": 10
+      },
+      {
+       "name": "Litleo",
+       "rate": 10
+      },
+      {
+       "name": "Yanma",
+       "rate": 10
+      },
+      {
+       "name": "Mudbray",
+       "rate": 10
+      },
+      {
+       "name": "Cubchoo",
+       "rate": 8
+      },
+      {
+       "name": "Sandile",
+       "rate": 5
+      },
+      {
+       "name": "Gligar",
+       "rate": 5
+      },
+      {
+       "name": "Jangmo-o",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Poliwag",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Clauncher",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Buizel",
+       "rate": 40,
+       "rod": "Good"
+      },
+      {
+       "name": "Remoraid",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Finneon",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Clawitzer",
+       "rate": 20,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Clauncher",
+       "rate": 60
+      },
+      {
+       "name": "Finneon",
+       "rate": 30
+      },
+      {
+       "name": "Remoraid",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "riverwalk-trail-south",
+   "index": 8,
+   "name": "Riverwalk Trail (South)",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Buizel",
+       "rate": 20
+      },
+      {
+       "name": "Wooper",
+       "rate": 20
+      },
+      {
+       "name": "Wurmple",
+       "rate": 10
+      },
+      {
+       "name": "Zigzagoon",
+       "rate": 10
+      },
+      {
+       "name": "Ekans",
+       "rate": 10
+      },
+      {
+       "name": "Bounsweet",
+       "rate": 10
+      },
+      {
+       "name": "Silcoon",
+       "rate": 8
+      },
+      {
+       "name": "Paldean Wooper",
+       "rate": 5
+      },
+      {
+       "name": "Cufant",
+       "rate": 5
+      },
+      {
+       "name": "Tropius",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Buizel",
+       "rate": 20
+      },
+      {
+       "name": "Wooper",
+       "rate": 20
+      },
+      {
+       "name": "Wurmple",
+       "rate": 10
+      },
+      {
+       "name": "Galarian Zigzagoon",
+       "rate": 10
+      },
+      {
+       "name": "Ekans",
+       "rate": 10
+      },
+      {
+       "name": "Pumpkaboo",
+       "rate": 10
+      },
+      {
+       "name": "Cascoon",
+       "rate": 8
+      },
+      {
+       "name": "Paldean Wooper",
+       "rate": 5
+      },
+      {
+       "name": "Cufant",
+       "rate": 5
+      },
+      {
+       "name": "Dreepy",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Skrelp",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Clauncher",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Buizel",
+       "rate": 40,
+       "rod": "Good"
+      },
+      {
+       "name": "Remoraid",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Barboach",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Whiscash",
+       "rate": 20,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Clauncher",
+       "rate": 60
+      },
+      {
+       "name": "Skrelp",
+       "rate": 30
+      },
+      {
+       "name": "Barboach",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kalami-city",
+   "index": 9,
+   "name": "Kalami City",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Buizel",
+       "rate": 20
+      },
+      {
+       "name": "Wingull",
+       "rate": 20
+      },
+      {
+       "name": "Wimpod",
+       "rate": 10
+      },
+      {
+       "name": "Toedscool",
+       "rate": 10
+      },
+      {
+       "name": "Lillipup",
+       "rate": 10
+      },
+      {
+       "name": "Applin",
+       "rate": 10
+      },
+      {
+       "name": "Shroodle",
+       "rate": 9
+      },
+      {
+       "name": "Meowth",
+       "rate": 5
+      },
+      {
+       "name": "Totodile",
+       "rate": 4
+      },
+      {
+       "name": "Passimian",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Buizel",
+       "rate": 20
+      },
+      {
+       "name": "Wingull",
+       "rate": 20
+      },
+      {
+       "name": "Wimpod",
+       "rate": 10
+      },
+      {
+       "name": "Toedscool",
+       "rate": 10
+      },
+      {
+       "name": "Murkrow",
+       "rate": 10
+      },
+      {
+       "name": "Applin",
+       "rate": 10
+      },
+      {
+       "name": "Shroodle",
+       "rate": 9
+      },
+      {
+       "name": "Alolan Meowth",
+       "rate": 5
+      },
+      {
+       "name": "Totodile",
+       "rate": 4
+      },
+      {
+       "name": "Oranguru",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Skrelp",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Clauncher",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Buizel",
+       "rate": 40,
+       "rod": "Good"
+      },
+      {
+       "name": "Remoraid",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Barboach",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Quagsire",
+       "rate": 20,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Clauncher",
+       "rate": 60
+      },
+      {
+       "name": "Skrelp",
+       "rate": 30
+      },
+      {
+       "name": "Barboach",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wanderer-s-woods-north",
+   "index": 10,
+   "name": "Wanderer's Woods (North)",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Shroomish",
+       "rate": 20
+      },
+      {
+       "name": "Aipom",
+       "rate": 20
+      },
+      {
+       "name": "Toedscool",
+       "rate": 10
+      },
+      {
+       "name": "Wooper",
+       "rate": 10
+      },
+      {
+       "name": "Pumpkaboo",
+       "rate": 10
+      },
+      {
+       "name": "Applin",
+       "rate": 10
+      },
+      {
+       "name": "Poliwag",
+       "rate": 5
+      },
+      {
+       "name": "Heracross",
+       "rate": 5
+      },
+      {
+       "name": "Pichu",
+       "rate": 4
+      },
+      {
+       "name": "Chikorita",
+       "rate": 4
+      },
+      {
+       "name": "Blitzle",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Shroomish",
+       "rate": 20
+      },
+      {
+       "name": "Impidimp",
+       "rate": 20
+      },
+      {
+       "name": "Toedscool",
+       "rate": 10
+      },
+      {
+       "name": "Paldean Wooper",
+       "rate": 10
+      },
+      {
+       "name": "Natu",
+       "rate": 10
+      },
+      {
+       "name": "Shuppet",
+       "rate": 10
+      },
+      {
+       "name": "Poliwag",
+       "rate": 5
+      },
+      {
+       "name": "Heracross",
+       "rate": 5
+      },
+      {
+       "name": "Pichu",
+       "rate": 4
+      },
+      {
+       "name": "Togedemaru",
+       "rate": 4
+      },
+      {
+       "name": "Blitzle",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Barboach",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Poliwag",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Wooper",
+       "rate": 40,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Remoraid",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "White-Striped Basculin",
+       "rate": 20,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Wimpod",
+       "rate": 60
+      },
+      {
+       "name": "Psyduck",
+       "rate": 30
+      },
+      {
+       "name": "Ducklett",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wanderer-s-woods-south",
+   "index": 11,
+   "name": "Wanderer's Woods (South)",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Paras",
+       "rate": 20
+      },
+      {
+       "name": "Natu",
+       "rate": 20
+      },
+      {
+       "name": "Wooper",
+       "rate": 10
+      },
+      {
+       "name": "Munna",
+       "rate": 10
+      },
+      {
+       "name": "Aipom",
+       "rate": 10
+      },
+      {
+       "name": "Ralts",
+       "rate": 10
+      },
+      {
+       "name": "Goomy",
+       "rate": 8
+      },
+      {
+       "name": "Heracross",
+       "rate": 5
+      },
+      {
+       "name": "Lileep",
+       "rate": 5
+      },
+      {
+       "name": "Scyther",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Paras",
+       "rate": 20
+      },
+      {
+       "name": "Natu",
+       "rate": 20
+      },
+      {
+       "name": "Paldean Wooper",
+       "rate": 10
+      },
+      {
+       "name": "Duskull",
+       "rate": 10
+      },
+      {
+       "name": "Impidimp",
+       "rate": 10
+      },
+      {
+       "name": "Ralts",
+       "rate": 10
+      },
+      {
+       "name": "Goomy",
+       "rate": 8
+      },
+      {
+       "name": "Oricorio Sensu",
+       "rate": 5
+      },
+      {
+       "name": "Anorith",
+       "rate": 5
+      },
+      {
+       "name": "Scyther",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pythios-town",
+   "index": 12,
+   "name": "Pythios Town",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Rufflet",
+       "rate": 20
+      },
+      {
+       "name": "Dwebble",
+       "rate": 20
+      },
+      {
+       "name": "Mienfoo",
+       "rate": 10
+      },
+      {
+       "name": "Doduo",
+       "rate": 10
+      },
+      {
+       "name": "Drowzee",
+       "rate": 10
+      },
+      {
+       "name": "Flittle",
+       "rate": 10
+      },
+      {
+       "name": "Meowth",
+       "rate": 10
+      },
+      {
+       "name": "Wingull",
+       "rate": 8
+      },
+      {
+       "name": "Honedge",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Vullaby",
+       "rate": 20
+      },
+      {
+       "name": "Dwebble",
+       "rate": 20
+      },
+      {
+       "name": "Mienfoo",
+       "rate": 10
+      },
+      {
+       "name": "Hoothoot",
+       "rate": 10
+      },
+      {
+       "name": "Drowzee",
+       "rate": 10
+      },
+      {
+       "name": "Flittle",
+       "rate": 10
+      },
+      {
+       "name": "Alolan Meowth",
+       "rate": 10
+      },
+      {
+       "name": "Wingull",
+       "rate": 8
+      },
+      {
+       "name": "Honedge",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Corphish",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Poliwag",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Spheal",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finizen",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Remoraid",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "White-Striped Basculin",
+       "rate": 20,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Spheal",
+       "rate": 60
+      },
+      {
+       "name": "Seel",
+       "rate": 30
+      },
+      {
+       "name": "Finizen",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pythios-cemetery",
+   "index": 13,
+   "name": "Pythios Cemetery",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Bellsprout",
+       "rate": 20
+      },
+      {
+       "name": "Wattrel",
+       "rate": 20
+      },
+      {
+       "name": "Trapinch",
+       "rate": 10
+      },
+      {
+       "name": "Scraggy",
+       "rate": 10
+      },
+      {
+       "name": "Paras",
+       "rate": 10
+      },
+      {
+       "name": "Sizzlipede",
+       "rate": 10
+      },
+      {
+       "name": "Shuppet",
+       "rate": 8
+      },
+      {
+       "name": "Goomy",
+       "rate": 5
+      },
+      {
+       "name": "Natu",
+       "rate": 5
+      },
+      {
+       "name": "Cyndaquil",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Litwick",
+       "rate": 20
+      },
+      {
+       "name": "Ekans",
+       "rate": 20
+      },
+      {
+       "name": "Trapinch",
+       "rate": 10
+      },
+      {
+       "name": "Stunky",
+       "rate": 10
+      },
+      {
+       "name": "Snom",
+       "rate": 10
+      },
+      {
+       "name": "Sizzlipede",
+       "rate": 10
+      },
+      {
+       "name": "Duskull",
+       "rate": 8
+      },
+      {
+       "name": "Goomy",
+       "rate": 5
+      },
+      {
+       "name": "Natu",
+       "rate": 5
+      },
+      {
+       "name": "Cyndaquil",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "White-Striped Basculin",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Finneon",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Dratini",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Poliwhirl",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "White-Striped Basculin",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Dratini",
+       "rate": 15,
+       "rod": "Super"
+      },
+      {
+       "name": "Dragonair",
+       "rate": 5,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Wimpod",
+       "rate": 60
+      },
+      {
+       "name": "Remoraid",
+       "rate": 30
+      },
+      {
+       "name": "Clauncher",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "erinys-path-west",
+   "index": 14,
+   "name": "Erinys Path (West)",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Sandile",
+       "rate": 20
+      },
+      {
+       "name": "Solosis",
+       "rate": 20
+      },
+      {
+       "name": "Komala",
+       "rate": 10
+      },
+      {
+       "name": "Baltoy",
+       "rate": 10
+      },
+      {
+       "name": "Omanyte",
+       "rate": 10
+      },
+      {
+       "name": "Zigzagoon",
+       "rate": 10
+      },
+      {
+       "name": "Zorua",
+       "rate": 10
+      },
+      {
+       "name": "Minior Blue Core",
+       "rate": 4
+      },
+      {
+       "name": "Minior Indigo Core",
+       "rate": 4
+      },
+      {
+       "name": "Togepi",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Baltoy",
+       "rate": 20
+      },
+      {
+       "name": "Gothita",
+       "rate": 20
+      },
+      {
+       "name": "Stantler",
+       "rate": 20
+      },
+      {
+       "name": "Omanyte",
+       "rate": 10
+      },
+      {
+       "name": "Galarian Zigzagoon",
+       "rate": 10
+      },
+      {
+       "name": "Zorua Hisuian",
+       "rate": 10
+      },
+      {
+       "name": "Minior Red Core",
+       "rate": 4
+      },
+      {
+       "name": "Minior Orange Core",
+       "rate": 4
+      },
+      {
+       "name": "Togepi",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "erinys-path-east",
+   "index": 15,
+   "name": "Erinys Path (East)",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Gastly",
+       "rate": 20
+      },
+      {
+       "name": "Cherubi",
+       "rate": 20
+      },
+      {
+       "name": "Falinks",
+       "rate": 10
+      },
+      {
+       "name": "Onix",
+       "rate": 10
+      },
+      {
+       "name": "Kabuto",
+       "rate": 10
+      },
+      {
+       "name": "Spinarak",
+       "rate": 10
+      },
+      {
+       "name": "Houndour",
+       "rate": 10
+      },
+      {
+       "name": "Minior Green Core",
+       "rate": 4
+      },
+      {
+       "name": "Minior Yellow Core",
+       "rate": 4
+      },
+      {
+       "name": "Mimikyu",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Gastly",
+       "rate": 20
+      },
+      {
+       "name": "Fomantis",
+       "rate": 20
+      },
+      {
+       "name": "Falinks",
+       "rate": 10
+      },
+      {
+       "name": "Onix",
+       "rate": 10
+      },
+      {
+       "name": "Kabuto",
+       "rate": 10
+      },
+      {
+       "name": "Skorupi",
+       "rate": 10
+      },
+      {
+       "name": "Salandit",
+       "rate": 10
+      },
+      {
+       "name": "Minior Violet Core",
+       "rate": 4
+      },
+      {
+       "name": "Minior Yellow Core",
+       "rate": 4
+      },
+      {
+       "name": "Mimikyu",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "White-Striped Basculin",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Poliwag",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Spheal",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finizen",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Remoraid",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Corphish",
+       "rate": 20,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Spheal",
+       "rate": 60
+      },
+      {
+       "name": "Seel",
+       "rate": 30
+      },
+      {
+       "name": "Shellder",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "froslass-cavern-f1",
+   "index": 16,
+   "name": "Froslass Cavern F1",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Snorunt",
+       "rate": 30
+      },
+      {
+       "name": "Sneasel",
+       "rate": 20
+      },
+      {
+       "name": "Hisuian Sneasel",
+       "rate": 20
+      },
+      {
+       "name": "Spheal",
+       "rate": 10
+      },
+      {
+       "name": "Seel",
+       "rate": 10
+      },
+      {
+       "name": "Swinub",
+       "rate": 8
+      },
+      {
+       "name": "Amaura",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "froslass-cavern-bf1",
+   "index": 17,
+   "name": "Froslass Cavern BF1",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Snorunt",
+       "rate": 30
+      },
+      {
+       "name": "Bronzor",
+       "rate": 20
+      },
+      {
+       "name": "Alolan Vulpix",
+       "rate": 20
+      },
+      {
+       "name": "Spheal",
+       "rate": 10
+      },
+      {
+       "name": "Onix",
+       "rate": 10
+      },
+      {
+       "name": "Swinub",
+       "rate": 8
+      },
+      {
+       "name": "Amaura",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "froslass-cavern-bf2",
+   "index": 18,
+   "name": "Froslass Cavern BF2",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Snorunt",
+       "rate": 30
+      },
+      {
+       "name": "Bronzor",
+       "rate": 20
+      },
+      {
+       "name": "Cubchoo",
+       "rate": 10
+      },
+      {
+       "name": "Spheal",
+       "rate": 10
+      },
+      {
+       "name": "Seel",
+       "rate": 10
+      },
+      {
+       "name": "Swinub",
+       "rate": 13
+      },
+      {
+       "name": "Snom",
+       "rate": 5
+      },
+      {
+       "name": "Amaura",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Shellder",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Poliwhirl",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Shellder",
+       "rate": 40,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Remoraid",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "White-Striped Basculin",
+       "rate": 20,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Shellder",
+       "rate": 60
+      },
+      {
+       "name": "Spheal",
+       "rate": 30
+      },
+      {
+       "name": "Sealeo",
+       "rate": 9
+      },
+      {
+       "name": "Lapras",
+       "rate": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "asfal-hills",
+   "index": 19,
+   "name": "Asfal Hills",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Tauros",
+       "rate": 20
+      },
+      {
+       "name": "Tauros Combat Breed",
+       "rate": 20
+      },
+      {
+       "name": "Pawmi",
+       "rate": 15
+      },
+      {
+       "name": "Galarian Meowth",
+       "rate": 10
+      },
+      {
+       "name": "Pachirisu",
+       "rate": 10
+      },
+      {
+       "name": "Yamper",
+       "rate": 10
+      },
+      {
+       "name": "Chatot",
+       "rate": 6
+      },
+      {
+       "name": "Buizel",
+       "rate": 5
+      },
+      {
+       "name": "Hawlucha",
+       "rate": 4
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Tauros Aqua Breed",
+       "rate": 20
+      },
+      {
+       "name": "Tauros Blaze Breed",
+       "rate": 20
+      },
+      {
+       "name": "Pawmi",
+       "rate": 15
+      },
+      {
+       "name": "Galarian Meowth",
+       "rate": 10
+      },
+      {
+       "name": "Dedenne",
+       "rate": 10
+      },
+      {
+       "name": "Yamper",
+       "rate": 10
+      },
+      {
+       "name": "Stunky",
+       "rate": 6
+      },
+      {
+       "name": "Shroodle",
+       "rate": 5
+      },
+      {
+       "name": "Hawlucha",
+       "rate": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sofos-city",
+   "index": 20,
+   "name": "Sofos City",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Wingull",
+       "rate": 20
+      },
+      {
+       "name": "Swablu",
+       "rate": 20
+      },
+      {
+       "name": "Crabrawler",
+       "rate": 10
+      },
+      {
+       "name": "Helioptile",
+       "rate": 10
+      },
+      {
+       "name": "Comfey",
+       "rate": 10
+      },
+      {
+       "name": "Ponyta",
+       "rate": 10
+      },
+      {
+       "name": "Corphish",
+       "rate": 8
+      },
+      {
+       "name": "Nosepass",
+       "rate": 5
+      },
+      {
+       "name": "Girafarig",
+       "rate": 5
+      },
+      {
+       "name": "Honedge",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Wingull",
+       "rate": 20
+      },
+      {
+       "name": "Noctowl",
+       "rate": 20
+      },
+      {
+       "name": "Crabrawler",
+       "rate": 10
+      },
+      {
+       "name": "Baltoy",
+       "rate": 10
+      },
+      {
+       "name": "Kirlia",
+       "rate": 10
+      },
+      {
+       "name": "Galarian Ponyta",
+       "rate": 10
+      },
+      {
+       "name": "Corphish",
+       "rate": 8
+      },
+      {
+       "name": "Nosepass",
+       "rate": 5
+      },
+      {
+       "name": "Natu",
+       "rate": 5
+      },
+      {
+       "name": "Honedge",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Tentacool",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Psyduck",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Clauncher",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Wailmer",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Clauncher",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Corsola",
+       "rate": 15,
+       "rod": "Super"
+      },
+      {
+       "name": "Galarian Corsola",
+       "rate": 5,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Tentacool",
+       "rate": 60
+      },
+      {
+       "name": "Wailmer",
+       "rate": 30
+      },
+      {
+       "name": "Corsola",
+       "rate": 5
+      },
+      {
+       "name": "Galarian Corsola",
+       "rate": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kipos-town",
+   "index": 21,
+   "name": "Kipos Town",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Magnemite",
+       "rate": 20
+      },
+      {
+       "name": "Eevee",
+       "rate": 20
+      },
+      {
+       "name": "Igglybuff",
+       "rate": 20
+      },
+      {
+       "name": "Timburr",
+       "rate": 10
+      },
+      {
+       "name": "Pikachu",
+       "rate": 10
+      },
+      {
+       "name": "Steenee",
+       "rate": 8
+      },
+      {
+       "name": "Doduo",
+       "rate": 5
+      },
+      {
+       "name": "Stantler",
+       "rate": 5
+      },
+      {
+       "name": "Beautifly",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Magnemite",
+       "rate": 20
+      },
+      {
+       "name": "Eevee",
+       "rate": 20
+      },
+      {
+       "name": "Stunky",
+       "rate": 20
+      },
+      {
+       "name": "Timburr",
+       "rate": 10
+      },
+      {
+       "name": "Pikachu",
+       "rate": 10
+      },
+      {
+       "name": "Pumpkaboo",
+       "rate": 8
+      },
+      {
+       "name": "Doduo",
+       "rate": 5
+      },
+      {
+       "name": "Stantler",
+       "rate": 5
+      },
+      {
+       "name": "Dustox",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Shellder",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Tentacool",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Psyduck",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Skrelp",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Wailmer",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Seel",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Corsola",
+       "rate": 15,
+       "rod": "Super"
+      },
+      {
+       "name": "Galarian Corsola",
+       "rate": 5,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Tentacool",
+       "rate": 60
+      },
+      {
+       "name": "Finneon",
+       "rate": 30
+      },
+      {
+       "name": "Corsola",
+       "rate": 5
+      },
+      {
+       "name": "Galarian Corsola",
+       "rate": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sea-of-asteri-west",
+   "index": 22,
+   "name": "Sea of Asteri (West)",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Stufful",
+       "rate": 20
+      },
+      {
+       "name": "Fomantis",
+       "rate": 20
+      },
+      {
+       "name": "Crabrawler",
+       "rate": 15
+      },
+      {
+       "name": "Wattrel",
+       "rate": 15
+      },
+      {
+       "name": "Bellsprout",
+       "rate": 10
+      },
+      {
+       "name": "Chatot",
+       "rate": 10
+      },
+      {
+       "name": "Scyther",
+       "rate": 8
+      },
+      {
+       "name": "Dreepy",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Ekans",
+       "rate": 20
+      },
+      {
+       "name": "Fomantis",
+       "rate": 20
+      },
+      {
+       "name": "Cufant",
+       "rate": 15
+      },
+      {
+       "name": "Wattrel",
+       "rate": 15
+      },
+      {
+       "name": "Bellsprout",
+       "rate": 10
+      },
+      {
+       "name": "Galarian Linoone",
+       "rate": 10
+      },
+      {
+       "name": "Scyther",
+       "rate": 4
+      },
+      {
+       "name": "Heracross",
+       "rate": 4
+      },
+      {
+       "name": "Dreepy",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Tentacool",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Psyduck",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Wailmer",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Chinchou",
+       "rate": 15,
+       "rod": "Super"
+      },
+      {
+       "name": "Lanturn",
+       "rate": 5,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Tentacool",
+       "rate": 60
+      },
+      {
+       "name": "Wingull",
+       "rate": 30
+      },
+      {
+       "name": "Wailmer",
+       "rate": 10
+      }
+     ]
+    },
+    {
+     "method": "underwater",
+     "label": "Underwater",
+     "encounters": [
+      {
+       "name": "Finneon",
+       "rate": 20
+      },
+      {
+       "name": "Tentacool",
+       "rate": 20
+      },
+      {
+       "name": "Wailmer",
+       "rate": 20
+      },
+      {
+       "name": "Magikarp",
+       "rate": 10
+      },
+      {
+       "name": "Chinchou",
+       "rate": 10
+      },
+      {
+       "name": "Corsola",
+       "rate": 8
+      },
+      {
+       "name": "Clauncher",
+       "rate": 5
+      },
+      {
+       "name": "Skrelp",
+       "rate": 5
+      },
+      {
+       "name": "Gyarados",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "marmaro-island",
+   "index": 23,
+   "name": "Marmaro Island",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Dwebble",
+       "rate": 20
+      },
+      {
+       "name": "Swablu",
+       "rate": 20
+      },
+      {
+       "name": "Tinkatink",
+       "rate": 10
+      },
+      {
+       "name": "Meditite",
+       "rate": 10
+      },
+      {
+       "name": "Growlithe",
+       "rate": 10
+      },
+      {
+       "name": "Sizzlipede",
+       "rate": 10
+      },
+      {
+       "name": "Dedenne",
+       "rate": 8
+      },
+      {
+       "name": "Lileep",
+       "rate": 6
+      },
+      {
+       "name": "Anorith",
+       "rate": 6
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Dwebble",
+       "rate": 20
+      },
+      {
+       "name": "Swablu",
+       "rate": 20
+      },
+      {
+       "name": "Tinkatink",
+       "rate": 10
+      },
+      {
+       "name": "Meditite",
+       "rate": 10
+      },
+      {
+       "name": "Hisuian Growlithe",
+       "rate": 10
+      },
+      {
+       "name": "Aron",
+       "rate": 10
+      },
+      {
+       "name": "Togedemaru",
+       "rate": 8
+      },
+      {
+       "name": "Lileep",
+       "rate": 6
+      },
+      {
+       "name": "Anorith",
+       "rate": 6
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Tentacool",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Psyduck",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Clauncher",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Wailmer",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Clauncher",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Corsola",
+       "rate": 15,
+       "rod": "Super"
+      },
+      {
+       "name": "Galarian Corsola",
+       "rate": 5,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Chinchou",
+       "rate": 60
+      },
+      {
+       "name": "Finizen",
+       "rate": 30
+      },
+      {
+       "name": "Corsola",
+       "rate": 5
+      },
+      {
+       "name": "Galarian Corsola",
+       "rate": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sea-of-asteri-east",
+   "index": 24,
+   "name": "Sea of Asteri (East)",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Crabrawler",
+       "rate": 20
+      },
+      {
+       "name": "Rufflet",
+       "rate": 20
+      },
+      {
+       "name": "Trumbeak",
+       "rate": 10
+      },
+      {
+       "name": "Charjabug",
+       "rate": 10
+      },
+      {
+       "name": "Ninjask",
+       "rate": 10
+      },
+      {
+       "name": "Cufant",
+       "rate": 10
+      },
+      {
+       "name": "Stufful",
+       "rate": 10
+      },
+      {
+       "name": "Charcadet",
+       "rate": 5
+      },
+      {
+       "name": "Jangmo-o",
+       "rate": 5
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Crabrawler",
+       "rate": 20
+      },
+      {
+       "name": "Vullaby",
+       "rate": 20
+      },
+      {
+       "name": "Trumbeak",
+       "rate": 10
+      },
+      {
+       "name": "Charjabug",
+       "rate": 10
+      },
+      {
+       "name": "Shedinja",
+       "rate": 10
+      },
+      {
+       "name": "Togepi",
+       "rate": 10
+      },
+      {
+       "name": "Chespin",
+       "rate": 5
+      },
+      {
+       "name": "Fennekin",
+       "rate": 5
+      },
+      {
+       "name": "Froakie",
+       "rate": 5
+      },
+      {
+       "name": "Jangmo-o",
+       "rate": 5
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Tentacool",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Psyduck",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Wailmer",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Chinchou",
+       "rate": 15,
+       "rod": "Super"
+      },
+      {
+       "name": "Lanturn",
+       "rate": 5,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Tentacool",
+       "rate": 60
+      },
+      {
+       "name": "Wattrel",
+       "rate": 30
+      },
+      {
+       "name": "Skrelp",
+       "rate": 10
+      }
+     ]
+    },
+    {
+     "method": "underwater",
+     "label": "Underwater",
+     "encounters": [
+      {
+       "name": "Finneon",
+       "rate": 20
+      },
+      {
+       "name": "Tentacool",
+       "rate": 20
+      },
+      {
+       "name": "Wailmer",
+       "rate": 20
+      },
+      {
+       "name": "Corphish",
+       "rate": 10
+      },
+      {
+       "name": "Finizen",
+       "rate": 10
+      },
+      {
+       "name": "Remoraid",
+       "rate": 10
+      },
+      {
+       "name": "Clamperl",
+       "rate": 8
+      },
+      {
+       "name": "Floatzel",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "myrrini-island",
+   "index": 25,
+   "name": "Myrrini Island",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Meditite",
+       "rate": 20
+      },
+      {
+       "name": "Steenee",
+       "rate": 20
+      },
+      {
+       "name": "Jigglypuff",
+       "rate": 10
+      },
+      {
+       "name": "Pancham",
+       "rate": 10
+      },
+      {
+       "name": "Cherubi",
+       "rate": 10
+      },
+      {
+       "name": "Hawlucha",
+       "rate": 10
+      },
+      {
+       "name": "Oricorio Baile",
+       "rate": 5
+      },
+      {
+       "name": "Oricorio Pa'u",
+       "rate": 5
+      },
+      {
+       "name": "Oricorio Pom-Pom",
+       "rate": 5
+      },
+      {
+       "name": "Oricorio Sensu",
+       "rate": 5
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Meditite",
+       "rate": 20
+      },
+      {
+       "name": "Drowzee",
+       "rate": 20
+      },
+      {
+       "name": "Floette Blue Flower",
+       "rate": 10
+      },
+      {
+       "name": "Pancham",
+       "rate": 10
+      },
+      {
+       "name": "Goomy",
+       "rate": 10
+      },
+      {
+       "name": "Hawlucha",
+       "rate": 10
+      },
+      {
+       "name": "Oricorio Baile",
+       "rate": 5
+      },
+      {
+       "name": "Oricorio Pa'u",
+       "rate": 5
+      },
+      {
+       "name": "Oricorio Pom-Pom",
+       "rate": 5
+      },
+      {
+       "name": "Oricorio Sensu",
+       "rate": 5
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Tentacool",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Psyduck",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Skrelp",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Wailmer",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Skrelp",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Chinchou",
+       "rate": 15,
+       "rod": "Super"
+      },
+      {
+       "name": "Lanturn",
+       "rate": 5,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "White-Striped Basculin",
+       "rate": 60
+      },
+      {
+       "name": "Unovan Basculin",
+       "rate": 30
+      },
+      {
+       "name": "Finizen",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pentepetal-city",
+   "index": 26,
+   "name": "Péntepetal City",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Floette",
+       "rate": 20
+      },
+      {
+       "name": "Beautifly",
+       "rate": 20
+      },
+      {
+       "name": "Grimer",
+       "rate": 20
+      },
+      {
+       "name": "Kirlia",
+       "rate": 10
+      },
+      {
+       "name": "Comfey",
+       "rate": 10
+      },
+      {
+       "name": "Mawile",
+       "rate": 10
+      },
+      {
+       "name": "Linoone",
+       "rate": 10
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Floette",
+       "rate": 20
+      },
+      {
+       "name": "Dustox",
+       "rate": 20
+      },
+      {
+       "name": "Alolan Grimer",
+       "rate": 20
+      },
+      {
+       "name": "Kirlia",
+       "rate": 10
+      },
+      {
+       "name": "Pawmo",
+       "rate": 10
+      },
+      {
+       "name": "Mawile",
+       "rate": 10
+      },
+      {
+       "name": "Galarian Linoone",
+       "rate": 10
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Tentacool",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Seel",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Sealeo",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Bruxish",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Poliwhirl",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Bruxish",
+       "rate": 15,
+       "rod": "Super"
+      },
+      {
+       "name": "Lapras",
+       "rate": 5,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Sealeo",
+       "rate": 60
+      },
+      {
+       "name": "Finizen",
+       "rate": 30
+      },
+      {
+       "name": "Dratini",
+       "rate": 9
+      },
+      {
+       "name": "Lapras",
+       "rate": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sea-of-vulcai",
+   "index": 27,
+   "name": "Sea of Vulcai",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Scyther",
+       "rate": 20
+      },
+      {
+       "name": "Tinkatuff",
+       "rate": 20
+      },
+      {
+       "name": "Kecleon",
+       "rate": 10
+      },
+      {
+       "name": "Sizzlipede",
+       "rate": 10
+      },
+      {
+       "name": "Charcadet",
+       "rate": 10
+      },
+      {
+       "name": "Hisuian Voltorb",
+       "rate": 10
+      },
+      {
+       "name": "Sprigatito",
+       "rate": 5
+      },
+      {
+       "name": "Fuecoco",
+       "rate": 5
+      },
+      {
+       "name": "Quaxly",
+       "rate": 5
+      },
+      {
+       "name": "Kilowattrel",
+       "rate": 5
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Scyther",
+       "rate": 20
+      },
+      {
+       "name": "Tinkatuff",
+       "rate": 20
+      },
+      {
+       "name": "Kecleon",
+       "rate": 10
+      },
+      {
+       "name": "Noctowl",
+       "rate": 10
+      },
+      {
+       "name": "Charcadet",
+       "rate": 10
+      },
+      {
+       "name": "Voltorb",
+       "rate": 10
+      },
+      {
+       "name": "Rowlet",
+       "rate": 5
+      },
+      {
+       "name": "Litten",
+       "rate": 5
+      },
+      {
+       "name": "Popplio",
+       "rate": 5
+      },
+      {
+       "name": "Kilowattrel",
+       "rate": 5
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Tentacool",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Psyduck",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Wailmer",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Chinchou",
+       "rate": 15,
+       "rod": "Super"
+      },
+      {
+       "name": "Lanturn",
+       "rate": 5,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Tentacool",
+       "rate": 60
+      },
+      {
+       "name": "Wailmer",
+       "rate": 30
+      },
+      {
+       "name": "Remoraid",
+       "rate": 5
+      },
+      {
+       "name": "Octillery",
+       "rate": 5
+      }
+     ]
+    },
+    {
+     "method": "underwater",
+     "label": "Underwater",
+     "encounters": [
+      {
+       "name": "Finneon",
+       "rate": 20
+      },
+      {
+       "name": "Remoraid",
+       "rate": 20
+      },
+      {
+       "name": "Wailmer",
+       "rate": 20
+      },
+      {
+       "name": "Skrelp",
+       "rate": 10
+      },
+      {
+       "name": "Chinchou",
+       "rate": 10
+      },
+      {
+       "name": "Corsola Galarian",
+       "rate": 8
+      },
+      {
+       "name": "Clamperl",
+       "rate": 5
+      },
+      {
+       "name": "Octillery",
+       "rate": 5
+      },
+      {
+       "name": "Relicanth",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fresco-isles",
+   "index": 28,
+   "name": "Fresco Isles",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Trapinch",
+       "rate": 20
+      },
+      {
+       "name": "Scraggy",
+       "rate": 20
+      },
+      {
+       "name": "Gligar",
+       "rate": 10
+      },
+      {
+       "name": "Numel",
+       "rate": 10
+      },
+      {
+       "name": "Tinkatuff",
+       "rate": 10
+      },
+      {
+       "name": "Doduo",
+       "rate": 10
+      },
+      {
+       "name": "Helioptile",
+       "rate": 5
+      },
+      {
+       "name": "Krokorok",
+       "rate": 5
+      },
+      {
+       "name": "Skorupi",
+       "rate": 4
+      },
+      {
+       "name": "Cyclizar",
+       "rate": 4
+      },
+      {
+       "name": "Larvitar",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Trapinch",
+       "rate": 20
+      },
+      {
+       "name": "Scraggy",
+       "rate": 20
+      },
+      {
+       "name": "Salandit",
+       "rate": 20
+      },
+      {
+       "name": "Gligar",
+       "rate": 10
+      },
+      {
+       "name": "Doduo",
+       "rate": 10
+      },
+      {
+       "name": "Dreepy",
+       "rate": 5
+      },
+      {
+       "name": "Paldean Wooper",
+       "rate": 5
+      },
+      {
+       "name": "Skorupi",
+       "rate": 4
+      },
+      {
+       "name": "Cyclizar",
+       "rate": 4
+      },
+      {
+       "name": "Larvitar",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Tentacool",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Psyduck",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Wailmer",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Chinchou",
+       "rate": 15,
+       "rod": "Super"
+      },
+      {
+       "name": "Dratini",
+       "rate": 5,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Tentacool",
+       "rate": 60
+      },
+      {
+       "name": "Wailmer",
+       "rate": 30
+      },
+      {
+       "name": "Remoraid",
+       "rate": 5
+      },
+      {
+       "name": "Dratini",
+       "rate": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "palati-city",
+   "index": 29,
+   "name": "Palati City",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Klawf",
+       "rate": 20
+      },
+      {
+       "name": "Baltoy",
+       "rate": 20
+      },
+      {
+       "name": "Quagsire",
+       "rate": 10
+      },
+      {
+       "name": "Girafarig",
+       "rate": 10
+      },
+      {
+       "name": "Archen",
+       "rate": 10
+      },
+      {
+       "name": "Pawmo",
+       "rate": 10
+      },
+      {
+       "name": "Toedscool",
+       "rate": 10
+      },
+      {
+       "name": "Timburr",
+       "rate": 4
+      },
+      {
+       "name": "Gurdurr",
+       "rate": 4
+      },
+      {
+       "name": "Lycanroc Day",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Klawf",
+       "rate": 20
+      },
+      {
+       "name": "Baltoy",
+       "rate": 20
+      },
+      {
+       "name": "Clodsire",
+       "rate": 10
+      },
+      {
+       "name": "Girafarig",
+       "rate": 10
+      },
+      {
+       "name": "Archen",
+       "rate": 10
+      },
+      {
+       "name": "Grafaiai",
+       "rate": 10
+      },
+      {
+       "name": "Munna",
+       "rate": 10
+      },
+      {
+       "name": "Toedscruel",
+       "rate": 8
+      },
+      {
+       "name": "Lycanroc Night",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Tentacool",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Tirtouga",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Shellder",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Wailmer",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Tirtouga",
+       "rate": 15,
+       "rod": "Super"
+      },
+      {
+       "name": "Dhelmise",
+       "rate": 5,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Tentacool",
+       "rate": 60
+      },
+      {
+       "name": "Wailmer",
+       "rate": 30
+      },
+      {
+       "name": "Tirtouga",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kaptara-island-west",
+   "index": 30,
+   "name": "Kaptara Island (West)",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Fomantis",
+       "rate": 20
+      },
+      {
+       "name": "Trumbeak",
+       "rate": 20
+      },
+      {
+       "name": "Oranguru",
+       "rate": 10
+      },
+      {
+       "name": "Passimian",
+       "rate": 10
+      },
+      {
+       "name": "Morgrem",
+       "rate": 10
+      },
+      {
+       "name": "Yanma",
+       "rate": 10
+      },
+      {
+       "name": "Duosion",
+       "rate": 8
+      },
+      {
+       "name": "Lurantis",
+       "rate": 5
+      },
+      {
+       "name": "Altaria",
+       "rate": 5
+      },
+      {
+       "name": "Reuniclus",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Fomantis",
+       "rate": 20
+      },
+      {
+       "name": "Trumbeak",
+       "rate": 20
+      },
+      {
+       "name": "Golduck",
+       "rate": 10
+      },
+      {
+       "name": "Claydol",
+       "rate": 10
+      },
+      {
+       "name": "Morgrem",
+       "rate": 10
+      },
+      {
+       "name": "Espathra",
+       "rate": 10
+      },
+      {
+       "name": "Gothorita",
+       "rate": 8
+      },
+      {
+       "name": "Lurantis",
+       "rate": 5
+      },
+      {
+       "name": "Altaria",
+       "rate": 5
+      },
+      {
+       "name": "Gothitelle",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kaptara-island-east",
+   "index": 31,
+   "name": "Kaptara Island (East)",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Charjabug",
+       "rate": 20
+      },
+      {
+       "name": "Skiploom",
+       "rate": 20
+      },
+      {
+       "name": "Weepinbell",
+       "rate": 10
+      },
+      {
+       "name": "Tauros",
+       "rate": 10
+      },
+      {
+       "name": "Tauros Combat Breed",
+       "rate": 10
+      },
+      {
+       "name": "Goomy",
+       "rate": 10
+      },
+      {
+       "name": "Perrserker",
+       "rate": 5
+      },
+      {
+       "name": "Sligoo",
+       "rate": 5
+      },
+      {
+       "name": "Dedenne",
+       "rate": 4
+      },
+      {
+       "name": "Cherrim",
+       "rate": 4
+      },
+      {
+       "name": "Doublade",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Charjabug",
+       "rate": 20
+      },
+      {
+       "name": "Arbok",
+       "rate": 20
+      },
+      {
+       "name": "Weepinbell",
+       "rate": 10
+      },
+      {
+       "name": "Tauros Aqua Breed",
+       "rate": 10
+      },
+      {
+       "name": "Tauros Blaze Breed",
+       "rate": 10
+      },
+      {
+       "name": "Goomy",
+       "rate": 10
+      },
+      {
+       "name": "Perrserker",
+       "rate": 5
+      },
+      {
+       "name": "Hisuian Sligoo",
+       "rate": 5
+      },
+      {
+       "name": "Togedemaru",
+       "rate": 4
+      },
+      {
+       "name": "Skuntank",
+       "rate": 4
+      },
+      {
+       "name": "Doublade",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lastlight-road",
+   "index": 32,
+   "name": "Lastlight Road",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Lampent",
+       "rate": 20
+      },
+      {
+       "name": "Litleo",
+       "rate": 20
+      },
+      {
+       "name": "Ponyta",
+       "rate": 10
+      },
+      {
+       "name": "Cherrim",
+       "rate": 10
+      },
+      {
+       "name": "Helioptile",
+       "rate": 10
+      },
+      {
+       "name": "Mudbray",
+       "rate": 10
+      },
+      {
+       "name": "Cyclizar",
+       "rate": 5
+      },
+      {
+       "name": "Breloom",
+       "rate": 5
+      },
+      {
+       "name": "Pyroar M",
+       "rate": 4
+      },
+      {
+       "name": "Pyroar F",
+       "rate": 4
+      },
+      {
+       "name": "Armarouge",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Lampent",
+       "rate": 20
+      },
+      {
+       "name": "Flaaffy",
+       "rate": 20
+      },
+      {
+       "name": "Galarian Ponyta",
+       "rate": 10
+      },
+      {
+       "name": "Applin",
+       "rate": 10
+      },
+      {
+       "name": "Helioptile",
+       "rate": 10
+      },
+      {
+       "name": "Mudbray",
+       "rate": 10
+      },
+      {
+       "name": "Cyclizar",
+       "rate": 5
+      },
+      {
+       "name": "Breloom",
+       "rate": 5
+      },
+      {
+       "name": "Pyroar M",
+       "rate": 4
+      },
+      {
+       "name": "Pyroar F",
+       "rate": 4
+      },
+      {
+       "name": "Ceruledge",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tower-of-dioxippus",
+   "index": 33,
+   "name": "Tower of Dioxippus",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Swablu",
+       "rate": 20
+      },
+      {
+       "name": "Applin",
+       "rate": 20
+      },
+      {
+       "name": "Yanma",
+       "rate": 10
+      },
+      {
+       "name": "Goomy",
+       "rate": 10
+      },
+      {
+       "name": "Steenee",
+       "rate": 10
+      },
+      {
+       "name": "Kecleon",
+       "rate": 10
+      },
+      {
+       "name": "Gogoat",
+       "rate": 5
+      },
+      {
+       "name": "Altaria",
+       "rate": 5
+      },
+      {
+       "name": "Flapple",
+       "rate": 4
+      },
+      {
+       "name": "Appletun",
+       "rate": 4
+      },
+      {
+       "name": "Dipplin",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Dreepy",
+       "rate": 20
+      },
+      {
+       "name": "Applin",
+       "rate": 20
+      },
+      {
+       "name": "Yanma",
+       "rate": 10
+      },
+      {
+       "name": "Goomy",
+       "rate": 10
+      },
+      {
+       "name": "Steenee",
+       "rate": 10
+      },
+      {
+       "name": "Mawile",
+       "rate": 10
+      },
+      {
+       "name": "Gogoat",
+       "rate": 5
+      },
+      {
+       "name": "Drakloak",
+       "rate": 5
+      },
+      {
+       "name": "Flapple",
+       "rate": 4
+      },
+      {
+       "name": "Appletun",
+       "rate": 4
+      },
+      {
+       "name": "Dipplin",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "corrin-crossing",
+   "index": 34,
+   "name": "Corrin Crossing",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Magnemite",
+       "rate": 20
+      },
+      {
+       "name": "Weepinbell",
+       "rate": 20
+      },
+      {
+       "name": "Yanma",
+       "rate": 10
+      },
+      {
+       "name": "Aerodactyl",
+       "rate": 10
+      },
+      {
+       "name": "Braviary",
+       "rate": 10
+      },
+      {
+       "name": "Golduck",
+       "rate": 10
+      },
+      {
+       "name": "Kirlia",
+       "rate": 8
+      },
+      {
+       "name": "Victreebel",
+       "rate": 5
+      },
+      {
+       "name": "Yanmega",
+       "rate": 5
+      },
+      {
+       "name": "Torkoal",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Magnemite",
+       "rate": 20
+      },
+      {
+       "name": "Munna",
+       "rate": 20
+      },
+      {
+       "name": "Girafarig",
+       "rate": 10
+      },
+      {
+       "name": "Aerodactyl",
+       "rate": 10
+      },
+      {
+       "name": "Hisuian Braviary",
+       "rate": 10
+      },
+      {
+       "name": "Golduck",
+       "rate": 10
+      },
+      {
+       "name": "Kirlia",
+       "rate": 8
+      },
+      {
+       "name": "Musharna",
+       "rate": 5
+      },
+      {
+       "name": "Farigiraf",
+       "rate": 5
+      },
+      {
+       "name": "Torkoal",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Shellder",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Psyduck",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Shellder",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Wailmer",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Bruxish",
+       "rate": 20,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Tentacruel",
+       "rate": 60
+      },
+      {
+       "name": "Lumineon",
+       "rate": 30
+      },
+      {
+       "name": "Bruxish",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "port-pello",
+   "index": 35,
+   "name": "Port Pello",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Togetic",
+       "rate": 20
+      },
+      {
+       "name": "Jigglypuff",
+       "rate": 20
+      },
+      {
+       "name": "Linoone",
+       "rate": 10
+      },
+      {
+       "name": "Pachirisu",
+       "rate": 10
+      },
+      {
+       "name": "Ribombee",
+       "rate": 10
+      },
+      {
+       "name": "Tropius",
+       "rate": 10
+      },
+      {
+       "name": "Alolan Raichu",
+       "rate": 8
+      },
+      {
+       "name": "Cherrim",
+       "rate": 5
+      },
+      {
+       "name": "Wigglytuff",
+       "rate": 5
+      },
+      {
+       "name": "Rapidash",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Morgrem",
+       "rate": 20
+      },
+      {
+       "name": "Floette",
+       "rate": 20
+      },
+      {
+       "name": "Galarian Linoone",
+       "rate": 10
+      },
+      {
+       "name": "Mimikyu",
+       "rate": 10
+      },
+      {
+       "name": "Ribombee",
+       "rate": 10
+      },
+      {
+       "name": "Tropius",
+       "rate": 10
+      },
+      {
+       "name": "Raichu",
+       "rate": 8
+      },
+      {
+       "name": "Grimmsnarl",
+       "rate": 5
+      },
+      {
+       "name": "Florges",
+       "rate": 5
+      },
+      {
+       "name": "Galarian Rapidash",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Shellder",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Psyduck",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Shellder",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Wailmer",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Bruxish",
+       "rate": 20,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Tentacruel",
+       "rate": 60
+      },
+      {
+       "name": "Lumineon",
+       "rate": 30
+      },
+      {
+       "name": "Bruxish",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nyx-trails",
+   "index": 36,
+   "name": "Nyx Trails",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Xatu",
+       "rate": 20
+      },
+      {
+       "name": "Snover",
+       "rate": 20
+      },
+      {
+       "name": "Breloom",
+       "rate": 10
+      },
+      {
+       "name": "Gogoat",
+       "rate": 10
+      },
+      {
+       "name": "Persian",
+       "rate": 10
+      },
+      {
+       "name": "Perrserker",
+       "rate": 10
+      },
+      {
+       "name": "Lurantis",
+       "rate": 5
+      },
+      {
+       "name": "Abomasnow",
+       "rate": 5
+      },
+      {
+       "name": "Banette",
+       "rate": 4
+      },
+      {
+       "name": "Dusclops",
+       "rate": 4
+      },
+      {
+       "name": "Hisuian Electrode",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Pumpkaboo",
+       "rate": 20
+      },
+      {
+       "name": "Snover",
+       "rate": 20
+      },
+      {
+       "name": "Shuppet",
+       "rate": 10
+      },
+      {
+       "name": "Duskull",
+       "rate": 10
+      },
+      {
+       "name": "Alolan Persian",
+       "rate": 10
+      },
+      {
+       "name": "Perrserker",
+       "rate": 10
+      },
+      {
+       "name": "Gourgeist",
+       "rate": 5
+      },
+      {
+       "name": "Abomasnow",
+       "rate": 5
+      },
+      {
+       "name": "Banette",
+       "rate": 4
+      },
+      {
+       "name": "Dusclops",
+       "rate": 4
+      },
+      {
+       "name": "Hisuian Electrode",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Shellder",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Psyduck",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Shellder",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Wailmer",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Clamperl",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Bruxish",
+       "rate": 20,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Tentacruel",
+       "rate": 60
+      },
+      {
+       "name": "Lumineon",
+       "rate": 30
+      },
+      {
+       "name": "Bruxish",
+       "rate": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "areios-hideout",
+   "index": 37,
+   "name": "Areios Hideout",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Houndoom",
+       "rate": 20
+      },
+      {
+       "name": "Ariados",
+       "rate": 20
+      },
+      {
+       "name": "Obstagoon",
+       "rate": 10
+      },
+      {
+       "name": "Primeape",
+       "rate": 10
+      },
+      {
+       "name": "Muk",
+       "rate": 10
+      },
+      {
+       "name": "Boltund",
+       "rate": 10
+      },
+      {
+       "name": "Salandit",
+       "rate": 10
+      },
+      {
+       "name": "Lurantis",
+       "rate": 8
+      },
+      {
+       "name": "Tyrunt",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Houndoom",
+       "rate": 20
+      },
+      {
+       "name": "Drapion",
+       "rate": 20
+      },
+      {
+       "name": "Obstagoon",
+       "rate": 10
+      },
+      {
+       "name": "Primeape",
+       "rate": 10
+      },
+      {
+       "name": "Alolan Muk",
+       "rate": 10
+      },
+      {
+       "name": "Boltund",
+       "rate": 10
+      },
+      {
+       "name": "Salandit",
+       "rate": 10
+      },
+      {
+       "name": "Scrafty",
+       "rate": 8
+      },
+      {
+       "name": "Tyrunt",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pollen-road",
+   "index": 38,
+   "name": "Pollen Road",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Floette Red Flower",
+       "rate": 20
+      },
+      {
+       "name": "Skiploom",
+       "rate": 20
+      },
+      {
+       "name": "Hisuian Electrode",
+       "rate": 10
+      },
+      {
+       "name": "Comfey",
+       "rate": 10
+      },
+      {
+       "name": "Pachirisu",
+       "rate": 10
+      },
+      {
+       "name": "Pikachu",
+       "rate": 10
+      },
+      {
+       "name": "Hawlucha",
+       "rate": 8
+      },
+      {
+       "name": "Braviary",
+       "rate": 5
+      },
+      {
+       "name": "Dodrio",
+       "rate": 5
+      },
+      {
+       "name": "Yanmega",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Floette Yellow Flower",
+       "rate": 20
+      },
+      {
+       "name": "Skiploom",
+       "rate": 20
+      },
+      {
+       "name": "Charjabug",
+       "rate": 10
+      },
+      {
+       "name": "Comfey",
+       "rate": 10
+      },
+      {
+       "name": "Dedenne",
+       "rate": 10
+      },
+      {
+       "name": "Togedemaru",
+       "rate": 10
+      },
+      {
+       "name": "Hawlucha",
+       "rate": 8
+      },
+      {
+       "name": "Hisuian Braviary",
+       "rate": 5
+      },
+      {
+       "name": "Espathra",
+       "rate": 5
+      },
+      {
+       "name": "Yanmega",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Remoraid",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Shellder",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Remoraid",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Octillery",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Golduck",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Cloyster",
+       "rate": 15,
+       "rod": "Super"
+      },
+      {
+       "name": "Huntail",
+       "rate": 5,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Finizen",
+       "rate": 60
+      },
+      {
+       "name": "Swanna",
+       "rate": 30
+      },
+      {
+       "name": "Dragonair",
+       "rate": 5
+      },
+      {
+       "name": "Dhelmise",
+       "rate": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "davosi-straits",
+   "index": 39,
+   "name": "Davosi Straits",
+   "groups": [
+    {
+     "method": "fishing",
+     "label": "Fishing",
+     "encounters": [
+      {
+       "name": "Magikarp",
+       "rate": 70,
+       "rod": "Old"
+      },
+      {
+       "name": "Remoraid",
+       "rate": 30,
+       "rod": "Old"
+      },
+      {
+       "name": "Shellder",
+       "rate": 60,
+       "rod": "Good"
+      },
+      {
+       "name": "Remoraid",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Finneon",
+       "rate": 20,
+       "rod": "Good"
+      },
+      {
+       "name": "Octillery",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Golduck",
+       "rate": 40,
+       "rod": "Super"
+      },
+      {
+       "name": "Cloyster",
+       "rate": 15,
+       "rod": "Super"
+      },
+      {
+       "name": "Gorebyss",
+       "rate": 5,
+       "rod": "Super"
+      }
+     ]
+    },
+    {
+     "method": "surfing",
+     "label": "Surfing",
+     "encounters": [
+      {
+       "name": "Finizen",
+       "rate": 60
+      },
+      {
+       "name": "Swanna",
+       "rate": 30
+      },
+      {
+       "name": "Dragonair",
+       "rate": 5
+      },
+      {
+       "name": "Dhelmise",
+       "rate": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wakewater-isle",
+   "index": 40,
+   "name": "Wakewater Isle",
+   "groups": [
+    {
+     "method": "day",
+     "label": "Land — Day",
+     "encounters": [
+      {
+       "name": "Gogoat",
+       "rate": 20
+      },
+      {
+       "name": "Toucannon",
+       "rate": 20
+      },
+      {
+       "name": "Bewear",
+       "rate": 10
+      },
+      {
+       "name": "Alolan Raichu",
+       "rate": 10
+      },
+      {
+       "name": "Dodrio",
+       "rate": 10
+      },
+      {
+       "name": "Passimian",
+       "rate": 10
+      },
+      {
+       "name": "Crabominable",
+       "rate": 5
+      },
+      {
+       "name": "Scyther",
+       "rate": 5
+      },
+      {
+       "name": "Komala",
+       "rate": 4
+      },
+      {
+       "name": "Crawdaunt",
+       "rate": 4
+      },
+      {
+       "name": "Farigiraf",
+       "rate": 2
+      }
+     ]
+    },
+    {
+     "method": "night",
+     "label": "Land — Night",
+     "encounters": [
+      {
+       "name": "Victreebel",
+       "rate": 20
+      },
+      {
+       "name": "Pelipper",
+       "rate": 20
+      },
+      {
+       "name": "Bewear",
+       "rate": 10
+      },
+      {
+       "name": "Raichu",
+       "rate": 10
+      },
+      {
+       "name": "Dodrio",
+       "rate": 10
+      },
+      {
+       "name": "Oranguru",
+       "rate": 10
+      },
+      {
+       "name": "Crabominable",
+       "rate": 5
+      },
+      {
+       "name": "Scyther",
+       "rate": 5
+      },
+      {
+       "name": "Komala",
+       "rate": 4
+      },
+      {
+       "name": "Crawdaunt",
+       "rate": 4
+      },
+      {
+       "name": "Annihilape",
+       "rate": 2
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "special": [
+  {
+   "name": "Spiky-Eared Pichu",
+   "how": "Complete the Port Pello sidequest by showing a Pikachu in your party."
+  },
+  {
+   "name": "Eternal Flower Floette",
+   "how": "Complete the Péntepetal City sidequest using 12 Wishing Stars."
+  },
+  {
+   "name": "Type: Null",
+   "how": "Complete the Fresco Isles sidequest using 12 Sitrus Berries."
+  },
+  {
+   "name": "Ogerpon",
+   "how": "Complete all donations at the Kipos Town Zoo."
+  },
+  {
+   "name": "Shiny Comfey",
+   "how": "Complete the Port Pello sidequest using 3 Strange Souvenirs."
+  },
+  {
+   "name": "Raikou",
+   "how": "Interact with the Raikou statue in Sofos Acropolis Temple after Team Chimera’s defeat."
+  },
+  {
+   "name": "Suicune",
+   "how": "Interact with the Suicune statue in Sofos Acropolis Temple after Team Chimera’s defeat."
+  },
+  {
+   "name": "Entei",
+   "how": "Interact with the Entei statue in Sofos Acropolis Temple after Team Chimera’s defeat."
+  }
+ ]
+}

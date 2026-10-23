@@ -1,0 +1,114 @@
+:root{--shell:#C8222C;--shadow:#8E1219;--hi:#E8505A;--lcd:#9BBC0F;--lcd2:#8BAC0F;--ink:#0F380F;--ink2:#306230;--bezel:#3A3A3A;--lens:#4FC3F7;--bg:#2B1D2E;--win:#C4D7A4}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%}
+body{background:var(--bg);font-family:VT323,monospace;color:var(--ink);display:flex;justify-content:center;padding:24px 12px}
+button,input{font:inherit;color:inherit}
+a{color:inherit}
+.dev{width:min(1360px,100%);min-height:calc(100vh - 48px);background:var(--shell);border-radius:28px 28px 28px 90px;box-shadow:inset -10px -12px 0 var(--shadow),inset 8px 8px 0 var(--hi),0 14px 0 #150c17;padding:46px 36px 64px;display:grid;grid-template-columns:minmax(300px,400px) 1fr minmax(280px,340px);grid-template-rows:auto 1fr;gap:26px;position:relative}
+.top{grid-column:1/-1;display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:-30px}
+.lens{width:54px;height:54px;border-radius:50%;background:var(--lens);border:6px solid #fff;box-shadow:0 0 0 4px #1a1a1a;flex:none}
+.led{width:14px;height:14px;border-radius:50%;border:2px solid #1a1a1a;flex:none}.led.r{background:#ff5252}.led.y{background:#ffd740}.led.g{background:#69f0ae}
+.title{font-family:"Press Start 2P";font-size:14px;color:#fff;letter-spacing:1px;margin-left:8px}
+.sw{font-family:"Press Start 2P";font-size:10px;color:#fff;display:flex;align-items:center;gap:6px;cursor:pointer;margin-left:10px}
+.sw input{appearance:none;width:30px;height:16px;background:var(--shadow);border:2px solid #1a1a1a;position:relative;cursor:pointer}
+.sw input::after{content:"";position:absolute;top:1px;left:1px;width:10px;height:10px;background:#f2d3d5;transition:left .6s steps(3)}
+.sw input:checked{background:var(--ink2)}.sw input:checked::after{left:15px;background:var(--lcd)}
+.sw input:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.tabs{display:none}
+.screen{background:var(--bezel);border-radius:14px;padding:16px;box-shadow:inset 0 0 0 4px #1d1d1d;display:flex;flex-direction:column;min-height:0;max-height:calc(100vh - 170px)}
+.cap{font-family:"Press Start 2P";font-size:10px;color:#f2d3d5;margin:0 0 8px;letter-spacing:1px}
+.lcd{background:var(--lcd);color:var(--ink);flex:1;border-radius:4px;padding:14px;font-size:22px;line-height:1.1;overflow:auto;min-height:0;background-image:repeating-linear-gradient(0deg,rgba(15,56,15,.06) 0 2px,transparent 2px 4px);scrollbar-color:var(--ink2) var(--lcd2)}
+h2{font-family:"Press Start 2P";font-size:13px;margin-bottom:10px;line-height:1.4}
+h3{font-family:"Press Start 2P";font-size:10px;margin:12px 0 6px;font-weight:400}
+.k{font-family:"Press Start 2P";font-size:9px}
+/* chat */
+.chat{display:flex;flex-direction:column}
+.log{flex:1;overflow:auto;min-height:120px}
+.bub{border:3px solid var(--ink);padding:8px 10px;margin-bottom:10px;background:var(--lcd2);white-space:pre-wrap;cursor:pointer}
+.bub.me{margin-left:48px;background:var(--lcd);cursor:default}
+.bub .src{display:block;margin-top:6px;font-size:18px}
+.bub .src a{margin-right:8px}
+.bub .tag{font-family:"Press Start 2P";font-size:8px;display:block;margin-top:6px;color:var(--ink2)}
+.cur{display:inline-block;width:10px;height:18px;background:var(--ink);vertical-align:middle;animation:blink 1.2s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.ask{display:flex;gap:8px;margin-top:6px}
+.ask input{flex:1;min-width:0;border:3px solid var(--ink);background:var(--lcd);padding:6px 8px;font-size:22px}
+.ask input::placeholder{color:var(--ink2)}
+.btnA,.btnB{width:44px;height:44px;border-radius:50%;border:3px solid #1a1a1a;background:#7a1b55;color:#fff;font-family:"Press Start 2P";font-size:12px;cursor:pointer;box-shadow:0 3px 0 #1a1a1a;flex:none}
+.btnA{background:var(--ink);color:var(--lcd)}
+.btnA:active,.btnB:active{transform:translateY(2px);box-shadow:0 1px 0 #1a1a1a}
+.status{font-size:18px;margin-top:6px;color:var(--ink2)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
+.chip{border:2px solid var(--ink);background:transparent;padding:2px 6px;font-size:18px;cursor:pointer}
+.chip:hover,.chip:focus-visible{background:var(--ink);color:var(--lcd)}
+/* sprite window (Art Director spec) */
+.spr{position:relative;flex:none;display:grid;place-items:center;background:var(--win);border:2px solid var(--ink);border-radius:4px;overflow:hidden}
+.spr::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(15,56,15,.07) 0 1px,transparent 1px 3px)}
+.spr img{image-rendering:pixelated;image-rendering:crisp-edges;filter:drop-shadow(2px 2px 0 rgba(48,98,48,.55));display:block}
+.spr.big{width:200px;height:200px}.spr.sm{width:48px;height:48px}
+.spr .ph{font-family:"Press Start 2P";font-size:20px;color:var(--ink2)}
+body.dmg .spr img{filter:url(#dmg) drop-shadow(2px 2px 0 rgba(48,98,48,.55))}
+/* entry */
+.head{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
+.head .meta{flex:1;min-width:180px}
+.no{font-family:"Press Start 2P";font-size:12px;line-height:1.6}
+.types{display:flex;gap:6px;margin:6px 0;flex-wrap:wrap}
+.type{font-family:"Press Start 2P";font-size:8px;padding:4px 6px;background:var(--ink);color:var(--lcd);text-transform:uppercase}
+.flavor{font-size:20px;margin-top:4px}
+table{border-collapse:collapse;width:100%}
+td{padding:3px 4px;border-bottom:2px dotted var(--ink2);font-size:20px;vertical-align:top}
+td.p{text-align:right;font-family:"Press Start 2P";font-size:10px;white-space:nowrap}
+th{font-family:"Press Start 2P";font-size:8px;text-align:left;padding:5px 4px;background:var(--ink2);color:var(--lcd);font-weight:400}
+.stat{display:grid;grid-template-columns:70px 36px 1fr;gap:6px;align-items:center;font-size:19px}
+.bar{height:8px;background:var(--lcd2);border:1px solid var(--ink)}.bar i{display:block;height:100%;background:var(--ink)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.evo{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.evo .st{border:2px solid var(--ink);padding:2px 6px}
+.evo .st.off{border-style:dashed;color:var(--ink2)}
+.evo .lz{font-family:"Press Start 2P";font-size:7px;background:var(--ink);color:var(--lcd);padding:2px 3px;margin-left:4px}
+.mx{display:flex;flex-wrap:wrap;gap:4px;margin:2px 0 6px}.mx .type{font-size:7px}
+.mx .lbl{font-family:"Press Start 2P";font-size:8px;min-width:46px;padding-top:3px}
+.verified{font-family:"Press Start 2P";font-size:8px;margin-top:12px;line-height:1.6}
+.empty{color:var(--ink2)}
+/* side */
+.search{width:100%;border:3px solid var(--ink);background:var(--lcd);padding:4px 8px;font-size:22px;margin-bottom:8px}
+.list{list-style:none}
+.list li{border-bottom:1px dashed var(--ink2)}
+.list a{display:flex;justify-content:space-between;gap:6px;padding:2px 0;text-decoration:none;font-size:20px;align-items:center}
+.list a:hover,.list a:focus-visible,.list a[aria-current]{background:var(--ink);color:var(--lcd);outline:none}
+.list b{font-family:"Press Start 2P";font-size:9px;font-weight:400;white-space:nowrap}
+.list img{width:32px;height:32px;image-rendering:pixelated;flex:none}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.seg{display:flex;gap:4px;margin-bottom:8px;flex-wrap:wrap}
+.seg button{font-family:"Press Start 2P";font-size:8px;border:2px solid var(--ink);background:none;padding:4px 6px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--lcd)}
+.back{font-family:"Press Start 2P";font-size:8px;border:2px solid var(--ink);background:none;padding:4px 6px;cursor:pointer;margin-bottom:8px}
+.controls{position:absolute;bottom:18px;left:60px;display:flex;align-items:center;gap:12px;font-family:"Press Start 2P";font-size:9px;color:#f2d3d5}
+.btnB{width:36px;height:36px;font-size:10px}
+.foot{position:absolute;bottom:26px;right:40px;font-family:"Press Start 2P";font-size:9px;color:#f2d3d5;text-align:right;line-height:1.6}
+.napscreen{position:fixed;inset:0;background:rgba(15,56,15,.88);color:var(--lcd);display:grid;place-content:center;text-align:center;z-index:9;font-family:"Press Start 2P";cursor:pointer}
+.napscreen[hidden]{display:none}
+.napscreen div{font-size:64px}.napscreen span{display:inline-block;animation:zz 3s ease-in-out infinite}.napscreen span:nth-child(2){animation-delay:1s;font-size:40px}
+.napscreen p{font-size:12px;line-height:2;margin-top:20px}
+@keyframes zz{50%{transform:translateY(-14px);opacity:.5}}
+body.nap .dev{filter:brightness(.6)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* tablet */
+@media (max-width:1100px){.dev{grid-template-columns:1fr 1fr}.screen[data-pane=area]{grid-column:1/-1}.screen{max-height:none}.lcd{max-height:75vh}}
+/* phone */
+@media (max-width:720px){
+ body{padding:8px 0}
+ .dev{border-radius:18px 18px 18px 48px;padding:40px 12px 96px;grid-template-columns:1fr;gap:12px;box-shadow:inset -6px -8px 0 var(--shadow),inset 5px 5px 0 var(--hi)}
+ .top{margin-top:-28px;gap:8px}.lens{width:40px;height:40px;border-width:4px}.led{width:10px;height:10px}.title{font-size:11px;margin-left:2px}.sw{font-size:8px;margin-left:4px}
+ .tabs{display:flex;gap:6px}.tabs button{flex:1;font-family:"Press Start 2P";font-size:9px;padding:8px 0;background:var(--shadow);color:#f2d3d5;border:2px solid #1a1a1a;border-radius:6px;cursor:pointer}
+ .tabs button[aria-pressed=true]{background:var(--ink);color:var(--lcd)}
+ .screen{display:none;padding:10px}.screen.on{display:flex}.screen[data-pane=area]{grid-column:auto}
+ .lcd{font-size:20px;padding:10px;max-height:none;min-height:60vh}
+ .spr.big{width:196px;height:196px}
+ .grid2,.cols{grid-template-columns:1fr}
+ .controls{left:16px;bottom:52px}.foot{left:16px;right:16px;bottom:12px;text-align:left;font-size:7px}
+}
+.cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+#side .list a span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+#side .cols .list a{font-size:18px}#side .cols .list img{width:24px;height:24px}
+@media (max-width:720px){.cols{grid-template-columns:minmax(0,1fr)}}

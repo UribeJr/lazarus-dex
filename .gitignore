@@ -1,0 +1,5 @@
+raw/pokeapi/
+node_modules/
+.vercel/
+.env*
+__pycache__/

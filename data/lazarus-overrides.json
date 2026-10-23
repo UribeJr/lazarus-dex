@@ -1,0 +1,8 @@
+{
+ "_note": "Lazarus-specific evolution changes. Only add entries verified against creator docs or pokemonlazarus.net. Each needs a source.",
+ "globalRules": {
+  "tradeToLinkCable": "Lazarus: trade evolutions use the Linking Cord (Sofos City, Green Shard Exchange) instead of a trade.",
+  "source": "https://pokemonlazarus.net/evolutionary-items-location/ (fetched 2026-10-23)"
+ },
+ "evolutions": {}
+}

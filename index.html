@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lazarus·Dex — Slow and Steady</title>
+<meta name="description" content="A sleepy, open-source-AI Pokédex for the Pokémon Lazarus fan game. Prof. Snooze answers from real encounter data, slowly.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="dmg" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="0.30 0.59 0.11 0 0  0.30 0.59 0.11 0 0  0.30 0.59 0.11 0 0  0 0 0 1 0"/>
+    <feComponentTransfer>
+      <feFuncR type="discrete" tableValues="0.059 0.188 0.545 0.608"/>
+      <feFuncG type="discrete" tableValues="0.220 0.384 0.675 0.737"/>
+      <feFuncB type="discrete" tableValues="0.059 0.188 0.059 0.059"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
+<div class="dev" id="dev">
+  <header class="top">
+    <span class="lens" aria-hidden="true"></span><span class="led r"></span><span class="led y"></span><span class="led g"></span>
+    <h1 class="title">LAZARUS·DEX</h1>
+    <label class="sw"><input type="checkbox" id="slow" checked> <span>SLOW MODE ▸ <b id="slowLbl">ON</b></span></label>
+    <label class="sw"><input type="checkbox" id="dmgT"> <span>DMG</span></label>
+  </header>
+  <nav class="tabs" aria-label="Screens">
+    <button data-pane="chat" aria-pressed="true">CHAT</button><button data-pane="dex" aria-pressed="false">DEX</button><button data-pane="area" aria-pressed="false">AREA</button>
+  </nav>
+  <section class="screen" data-pane="chat" aria-label="Prof. Snooze chat">
+    <div class="cap">▣ PROF. CHAT [z z z]</div>
+    <div class="lcd chat">
+      <h2>PROF. SNOOZE</h2>
+      <div id="log" class="log" aria-live="polite"></div>
+      <form id="ask" class="ask" autocomplete="off">
+        <input id="q" maxlength="300" placeholder="Where do I catch Dratini?" aria-label="Ask Prof. Snooze">
+        <button class="btnA" title="Ask (A)">A</button>
+      </form>
+      <div class="status" id="status">SLOW MODE: Prof. Snooze types slowly. Tap text to wake him up.</div>
+    </div>
+  </section>
+  <section class="screen" data-pane="dex" aria-label="Dex entry">
+    <div class="cap">▣ DEX ENTRY</div>
+    <div class="lcd" id="entry"><p>Loading dex…</p></div>
+  </section>
+  <section class="screen" data-pane="area" aria-label="Areas and dex list">
+    <div class="cap" id="areaCap">▣ AREA</div>
+    <div class="lcd" id="side"></div>
+  </section>
+  <div class="controls">
+    <span>✚ D-PAD</span><span>Ⓐ ASK</span><button id="nap" class="btnB" title="Nap (B)">B</button><span>NAP</span>
+  </div>
+  <footer class="foot">Unofficial fan project. Data: <a href="https://pokemonlazarus.net/pokemon-locations/" rel="noopener">pokemonlazarus.net</a> · Sprites: <a href="https://github.com/PokeAPI/sprites" rel="noopener">PokeAPI</a></footer>
+  <div class="napscreen" id="napscreen" hidden><div>Z<span>z</span><span>z</span></div><p>Prof. Snooze is napping…<br>press any key to wake</p></div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
