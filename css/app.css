@@ -175,3 +175,82 @@ body.nap .dev{filter:brightness(.6)}
  @media (max-width:359px){.optBtn .xs{display:none}}
  .controls{left:16px;bottom:52px}.foot{left:16px;right:16px;bottom:12px;text-align:left;font-size:7px}
 }
+/* ===== device layer (builds on 171e4a7; sizes/grid above are Enrique's) ===== */
+.dev{background:radial-gradient(120% 80% at 18% 0%,#d93a43 0%,var(--shell) 38%,#b51d26 100%);box-shadow:inset -10px -12px 0 var(--shadow),inset 8px 8px 0 var(--hi),inset 0 0 0 2px rgba(0,0,0,.25),0 14px 0 #150c17,0 30px 50px rgba(0,0,0,.45)}
+/* restrained wear: faint scuffs near grip edges, never over screens */
+.dev::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(40px 18px at 6% 92%,rgba(255,255,255,.07),transparent 70%),radial-gradient(60px 10px at 96% 8%,rgba(0,0,0,.10),transparent 70%),radial-gradient(30px 8px at 50% 99%,rgba(255,255,255,.06),transparent 70%)}
+/* left hinge knuckles: the lid folded open to the left */
+.hinge{position:absolute;left:-7px;top:12%;bottom:22%;width:12px;border-radius:6px;background:repeating-linear-gradient(180deg,#5c0d12 0 46px,#2a0508 46px 50px),linear-gradient(90deg,#3d070b,#7d1219 50%,#3d070b);background-blend-mode:multiply;box-shadow:-2px 0 0 #150c17,inset 0 0 0 1px rgba(0,0,0,.4);pointer-events:none}
+/* recessed screens: bezel sits below the shell surface, LCD sits below the bezel */
+.screen{box-shadow:inset 0 0 0 4px #1d1d1d,inset 0 6px 10px rgba(0,0,0,.55),0 1px 0 rgba(255,255,255,.18),0 -2px 0 rgba(0,0,0,.25)}
+.lcd{box-shadow:inset 0 3px 6px rgba(15,56,15,.45),inset 0 0 0 1px rgba(15,56,15,.35)}
+/* lens: translucent blue glass with a moving highlight; state set on #dev[data-snooze] */
+.lens{position:relative;overflow:hidden;background:radial-gradient(circle at 34% 30%,#e6f7ff 0 8%,#8fdcff 16%,var(--lens) 38%,#1a6fa8 78%,#0d3d66 100%);box-shadow:0 0 0 4px #1a1a1a,0 4px 0 4px #1a1a1a,inset 0 -6px 10px rgba(0,30,60,.5)}
+.lens i{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(140,230,255,.0),rgba(140,230,255,.0));transition:background .3s}
+.dev[data-snooze=think] .lens i{animation:lensThink 1s ease-in-out infinite}
+.dev[data-snooze=talk] .lens i{animation:lensTalk .24s steps(2) infinite}
+.dev[data-snooze=error] .lens{filter:hue-rotate(160deg) saturate(1.3)}
+@keyframes lensThink{0%,100%{background:radial-gradient(circle,rgba(200,245,255,.0) 0,rgba(200,245,255,0) 70%)}50%{background:radial-gradient(circle,rgba(200,245,255,.75) 0,rgba(120,220,255,.25) 60%,transparent 72%)}}
+@keyframes lensTalk{50%{background:radial-gradient(circle,rgba(220,250,255,.55) 0,transparent 65%)}}
+.leds{display:flex;gap:inherit;align-items:center}
+/* LEDs off by default, lit by app state (#dev[data-led]) */
+.led{box-shadow:inset 0 -2px 2px rgba(0,0,0,.35);filter:brightness(.42) saturate(.6);transition:filter .2s,box-shadow .2s}
+.dev[data-led=ready] .led.g,.dev[data-led=busy] .led.y,.dev[data-led=off] .led.r,body.nap .led.r{filter:none;box-shadow:inset 0 -2px 2px rgba(0,0,0,.2),0 0 8px currentColor}
+.led.r{color:#ff5252}.led.y{color:#ffd740}.led.g{color:#69f0ae}
+.dev[data-led=busy] .led.y{animation:ledBlink .5s steps(1) infinite}
+.dev[data-led=ready] .led.g{animation:none}
+@keyframes ledBlink{50%{filter:brightness(.42) saturate(.6);box-shadow:none}}
+/* speaker grille */
+.spk{position:absolute;bottom:20px;left:50%;width:96px;height:22px;transform:translateX(-50%);background:repeating-linear-gradient(90deg,#4a0a0f 0 4px,transparent 4px 9px);border-radius:3px;opacity:.85;pointer-events:none;box-shadow:inset 0 1px 0 rgba(0,0,0,.4)}
+/* tactile presses: shadow collapses as the cap travels down */
+.optBtn,.tabs button,.capbtn,.seg button,.back,.bootBtn{box-shadow:0 3px 0 #1a1a1a;transition:transform .06s,box-shadow .06s}
+.optBtn:active,.tabs button:active,.capbtn:active,.seg button:active,.back:active,.bootBtn:active{transform:translateY(2px);box-shadow:0 1px 0 #1a1a1a}
+.seg button[aria-pressed=true],.tabs button[aria-pressed=true]{box-shadow:0 1px 0 #1a1a1a;transform:translateY(2px)}
+.btnA,.btnB{background-image:radial-gradient(circle at 35% 30%,rgba(255,255,255,.25),transparent 55%)}
+.btnA:active,.btnB:active{box-shadow:0 1px 0 #1a1a1a,inset 0 2px 3px rgba(0,0,0,.4)}
+.capbtn.replay{display:block;border-color:#fff;color:#fff;min-height:30px}
+/* LCD warm-up after the intro hands off */
+.dev.warm .lcd{animation:warm .5s steps(5) 1}
+@keyframes warm{0%{filter:brightness(.25) contrast(.6)}40%{filter:brightness(1.25)}60%{filter:brightness(.8)}100%{filter:none}}
+/* selection: LCD wipe bar + sprite reveal + stat bars grow */
+#entry{position:relative}
+.wipe{position:absolute;left:0;right:0;top:0;height:100%;pointer-events:none;background:linear-gradient(180deg,transparent 0,rgba(15,56,15,.0) 40%,rgba(15,56,15,.55) 48%,var(--lcd) 52%,var(--lcd) 100%);z-index:3}
+.spr.reveal img,.spr.reveal canvas{animation:sprIn .32s steps(4) both}
+@keyframes sprIn{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0)}}
+.bar i{transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.bar.z i{width:0!important;transition:none}
+.scan{animation:scan .28s steps(4) 1}
+@keyframes scan{from{filter:brightness(.82)}to{filter:none}}
+/* ===== boot overlay: CSS poster (also the no-WebGL fallback) + 3D canvas host ===== */
+.boot{position:fixed;inset:0;z-index:20;display:grid;grid-template-rows:1fr auto;background:radial-gradient(90% 70% at 50% 40%,#3a2840,var(--bg) 70%,#140b16);font-family:"Press Start 2P"}
+html.intro .boot[hidden]{display:grid}
+.boot[hidden]{display:none}
+.bootStage{position:relative;display:grid;place-items:center;min-height:0;perspective:1400px;overflow:hidden}
+.bootStage canvas{position:absolute;inset:0;width:100%!important;height:100%!important;display:block;cursor:pointer}
+.lid{position:relative;width:min(560px,82vw);aspect-ratio:1.45;border:0;border-radius:24px 24px 24px 70px;background:radial-gradient(120% 90% at 20% 0%,#e0424b,var(--shell) 45%,#9c1720);box-shadow:inset -10px -12px 0 var(--shadow),inset 8px 8px 0 var(--hi),0 16px 0 #150c17,0 40px 60px rgba(0,0,0,.5);cursor:pointer;color:#fff;font-family:inherit;transform-origin:0 50%;display:block}
+.lid:focus-visible{outline:3px solid #fff;outline-offset:6px}
+.lidLens{position:absolute;left:8%;top:10%;width:22%;aspect-ratio:1;border-radius:50%;border:clamp(4px,1.2vw,9px) solid #fff;box-shadow:0 0 0 5px #1a1a1a,0 0 30px rgba(79,195,247,.5);background:radial-gradient(circle at 34% 30%,#e6f7ff 0 8%,#8fdcff 16%,var(--lens) 40%,#1a6fa8 80%,#0d3d66);animation:lidPulse 2.4s ease-in-out infinite}
+@keyframes lidPulse{50%{box-shadow:0 0 0 5px #1a1a1a,0 0 46px rgba(79,195,247,.9)}}
+.lidLeds{position:absolute;left:34%;top:13%;display:flex;gap:10px}
+.lidLeds b{width:14px;height:14px;border-radius:50%;border:2px solid #1a1a1a;background:#ff5252;filter:brightness(.45)}
+.lidLeds b:nth-child(2){background:#ffd740}.lidLeds b:nth-child(3){background:#69f0ae}
+.lidTitle{position:absolute;left:8%;bottom:16%;font-size:clamp(10px,2.4vw,18px);letter-spacing:2px;text-shadow:0 2px 0 var(--shadow)}
+.lidHint{position:absolute;right:8%;bottom:7%;font-size:clamp(7px,1.3vw,9px);color:var(--pale);animation:blink 1.6s steps(1) infinite}
+.boot.gl .lid{opacity:0;pointer-events:none}
+.boot.open .lid{animation:lidOpen .7s cubic-bezier(.5,0,.3,1) forwards}
+.boot.open .lidLeds b{filter:none}
+@keyframes lidOpen{to{transform:rotateY(-110deg);opacity:0}}
+.bootBar{display:flex;gap:12px;justify-content:center;padding:16px 12px max(16px,env(safe-area-inset-bottom));flex-wrap:wrap}
+.bootBtn{font-family:inherit;font-size:10px;min-height:44px;padding:0 16px;border:2px solid #1a1a1a;border-radius:8px;background:var(--shadow);color:var(--pale);cursor:pointer}
+.bootBtn.power{background:var(--ink);color:var(--lcd)}
+.bootBtn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.boot.fade{transition:opacity .35s;opacity:0}
+@media (max-width:1179px){.spk{display:none}}
+@media (max-width:720px){
+ .hinge{left:-4px;width:7px}
+ .lens{box-shadow:0 0 0 2px #1a1a1a,0 2px 0 2px #1a1a1a,inset 0 -3px 6px rgba(0,30,60,.5)}
+ .leds{gap:8px}
+ .replay{min-height:40px}
+ .lid{border-radius:18px 18px 18px 44px}
+}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}.wipe{display:none}}

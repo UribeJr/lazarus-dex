@@ -10,6 +10,32 @@ const TYPES = ['normal','fire','water','electric','grass','ice','fighting','pois
 let DEX, BY = {}, BYSPECIES = {}, AREAS = {};
 const state = { slow: true, napping: false, area: null, mon: null, filter: 'all', scope: 'all', listY: 0, quiet: false };
 const PHONE = matchMedia('(max-width:720px)'), TABLET = matchMedia('(min-width:721px) and (max-width:1179px)');
+const RM = matchMedia('(prefers-reduced-motion: reduce)');
+
+// ---------- device layer: lens + LEDs mirror real state; optional sound; LCD wipe ----------
+const dev = () => $('#dev');
+let inflight = 0;
+function setSnooze(s) { dev().dataset.snooze = s; ledSync(); }
+function ledSync() { const d = dev(); d.dataset.led = !DEX ? (d.dataset.led === 'off' ? 'off' : 'busy') : inflight ? 'busy' : d.dataset.snooze === 'error' ? 'off' : 'ready'; }
+const snd = { on: false, ctx: null };
+try { snd.on = localStorage.getItem('lzdex.sound') === 'on'; } catch { /* storage blocked */ }
+function blip(f = 880, d = .04) {
+  if (!snd.on) return;
+  try { snd.ctx ||= new (window.AudioContext || window.webkitAudioContext)(); const o = snd.ctx.createOscillator(), g = snd.ctx.createGain();
+    o.type = 'square'; o.frequency.value = f; g.gain.value = .03; o.connect(g).connect(snd.ctx.destination); o.start(); o.stop(snd.ctx.currentTime + d); } catch { /* no audio */ }
+}
+let wipeAnim = null;
+function lcdWipe(el) {
+  wipeAnim?.cancel(); $$('.wipe', el).forEach(w => w.remove());
+  const spr = $('.spr', el); spr?.classList.add('reveal');
+  const bars = $$('.bar', el); bars.forEach(b => b.classList.add('z'));
+  if (RM.matches || !el.animate) { bars.forEach(b => b.classList.remove('z')); return; }
+  const w = document.createElement('div'); w.className = 'wipe'; w.style.top = el.scrollTop + 'px'; w.style.height = el.clientHeight + 'px'; el.appendChild(w);
+  wipeAnim = w.animate([{ transform: 'translateY(0)', opacity: 1 }, { transform: `translateY(${el.clientHeight}px)`, opacity: 1 }], { duration: 260, easing: 'steps(8)' });
+  wipeAnim.onfinish = wipeAnim.oncancel = () => w.remove();
+  requestAnimationFrame(() => requestAnimationFrame(() => bars.forEach(b => b.classList.remove('z'))));
+}
+function scan(el) { if (RM.matches) return; el.classList.remove('scan'); void el.offsetWidth; el.classList.add('scan'); }
 
 // ---------- sprites: Gen 5 animated GIF -> static PNG -> placeholder; whole device-pixel scaling only ----------
 function spriteSources(p) {
@@ -123,6 +149,7 @@ function renderEntry(p) {
   h += `<p class="verified">✓ DATA · pokemonlazarus.net (${esc(DEX.locationsFetched)}) · PokeAPI</p>`;
   el.insertAdjacentHTML('beforeend', h);
   el.scrollTop = 0; $$('.list a').forEach(a => a.toggleAttribute('aria-current', a.dataset.id === p.id));
+  lcdWipe(el); blip(1320, .03);
 }
 
 // ---------- browse: list view stays mounted so search, filters and scroll survive area visits ----------
@@ -136,7 +163,7 @@ function renderArea(a) {
   const day = a.groups.find(g => g.method === 'day'), night = a.groups.find(g => g.method === 'night'), rest = a.groups.filter(g => g !== day && g !== night);
   s.innerHTML = `<button class="back" data-go="list">◂ BACK TO BROWSE</button><h2>${esc(a.name.toUpperCase())}</h2><p class="count">${speciesIn(a)} SPECIES · % = ENCOUNTER RATE</p>
     <div class="cols">${day ? '<div>' + grp(day) + '</div>' : ''}${night ? '<div>' + grp(night) + '</div>' : ''}</div>${rest.map(grp).join('')}`;
-  $('#listView').hidden = true; s.hidden = false; $('#side').scrollTop = 0; hideBrokenIcons(s);
+  $('#listView').hidden = true; s.hidden = false; $('#side').scrollTop = 0; hideBrokenIcons(s); scan($('#side')); blip(660, .03);
 }
 function openList() {
   state.area = null; $('#areaCap').textContent = '▣ BROWSE';
@@ -186,23 +213,26 @@ function typeOut(el, text, extra) {
 async function ask(q) {
   bubble('me', '> ' + q); const b = bubble('', '');
   $('#status').textContent = 'Prof. Snooze is waking up… z z z';
+  inflight++; setSnooze('think'); blip(520, .05);
   let j;
   try {
     const r = await fetch('api/snooze', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q }) });
     j = await r.json().catch(() => ({}));
     if (!j.answer) j = { ok: false, answer: j.error || "Prof. Snooze mumbled something unintelligible. Try again in a bit.", sources: [] };
   } catch { j = { ok: false, resting: true, answer: "Prof. Snooze is offline (resting). Try BROWSE to search the dex instead!", sources: [] }; }
+  inflight--; setSnooze(j.ok === false || j.resting ? 'error' : 'talk');
   const src = (j.sources || []).length ? `<span class="src">${j.sources.map(s => `<a href="#/${s.kind}/${esc(s.id)}">▸ ${esc(s.t)}</a>`).join('')}</span>` : '';
   const tag = `<span class="tag">${j.resting ? 'RESTING · ' : ''}${j.model && j.model !== 'computed' ? esc(j.model.replace('openai/', '')) : j.model === 'computed' ? 'DEX LOOKUP' : ''}${j.cached ? ' · CACHED' : ''}</span>`;
   $('#status').textContent = state.slow ? 'typing… slowly (tap to skip)' : '';
   await typeOut(b, j.answer, src + tag);
+  if (dev().dataset.snooze === 'talk') setSnooze('idle');
   $('#status').textContent = 'Ask about any Pokémon or area. Prof. Snooze only knows the Lazarus tables.';
   // off-phone, follow the first source without pulling the chat out of view (quiet = keep the current tab)
   if (j.sources?.[0] && !PHONE.matches) { const h = `#/${j.sources[0].kind}/${j.sources[0].id}`; if (location.hash !== h) { state.quiet = true; location.hash = h; } }
 }
 
 // ---------- nap / slow / dmg ----------
-function nap(on) { state.napping = on; $('#napscreen').hidden = !on; document.body.classList.toggle('nap', on); }
+function nap(on) { if (on) blip(220, .08); state.napping = on; $('#napscreen').hidden = !on; document.body.classList.toggle('nap', on); }
 const go = h => location.hash === h ? route() : (location.hash = h);
 function route() {
   const quiet = state.quiet; state.quiet = false;
@@ -225,12 +255,25 @@ function show(p, y) {
 }
 function opts(on) { $('#optBtn').setAttribute('aria-expanded', on); $('#opts').classList.toggle('open', on); }
 
+// ---------- power-on intro (lazy module; the app underneath is already live) ----------
+function intro(replay) {
+  const boot = $('#boot');
+  if (!replay && !document.documentElement.classList.contains('intro')) return;
+  boot.hidden = false; dev().inert = true;
+  const done = () => { boot.hidden = true; document.documentElement.classList.remove('intro'); dev().inert = false; };
+  import('./device-intro.js').then(m => m.play({ replay, done, reduced: RM.matches })).catch(e => { console.warn('intro unavailable', e); done(); });
+}
+
 async function init() {
   show('chat');
   $$('.tabs button').forEach(b => b.onclick = () => show(b.dataset.pane));
   [PHONE, TABLET].forEach(m => m.addEventListener('change', syncTabs));
   $('#slow').onchange = e => { state.slow = e.target.checked; $('#slowLbl').textContent = state.slow ? 'ON' : 'OFF'; if (!state.slow && typing) typing.finish(); };
   $('#dmgT').onchange = e => document.body.classList.toggle('dmg', e.target.checked);
+  $('#sndT').checked = snd.on;
+  $('#sndT').onchange = e => { snd.on = e.target.checked; try { localStorage.setItem('lzdex.sound', snd.on ? 'on' : 'off'); } catch { /* */ } blip(990, .05); };
+  $('#replay').onclick = () => { opts(false); intro(true); };
+  intro(false);
   $('#optBtn').onclick = () => opts($('#optBtn').getAttribute('aria-expanded') !== 'true');
   document.addEventListener('click', e => { if (!e.target.closest('#opts, #optBtn')) opts(false); });
   $('#wide').onclick = () => { const on = $('#dev').classList.toggle('wide'); $('#wide').setAttribute('aria-pressed', on); $('#wide').textContent = on ? '◂ SLIM' : 'WIDE ▸'; };
@@ -244,7 +287,8 @@ async function init() {
   $('#side').addEventListener('click', e => { if (e.target.closest('[data-go=list]')) go('#/list'); });
   // whole encounter row opens the area; the link inside stays the keyboard target
   $('#entry').addEventListener('click', e => { const tr = e.target.closest('tr[data-area]'); if (tr && !e.target.closest('a')) go('#/area/' + tr.dataset.area); });
-  try { const r = await fetch('data/dex.json'); DEX = await r.json(); } catch {
+  try { const r = await fetch('data/dex.json'); DEX = await r.json(); ledSync(); } catch {
+    dev().dataset.led = 'off';
     // file:// pages can't fetch local JSON; say how to run it instead of hanging on "Loading dex…"
     $('#entry').innerHTML = location.protocol === 'file:' ? '<p>Prof. Snooze can\'t read the dex from a file:// page.</p><p class="k" style="margin-top:10px;line-height:1.6">RUN: node dev-server.js<br>OPEN: http://localhost:3000</p>' : '<p>Couldn\'t load the dex. Try reloading.</p>';
     return;

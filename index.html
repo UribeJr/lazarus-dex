@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/app.css">
+<script>try{var q=new URLSearchParams(location.search);if(q.has('intro'))localStorage.removeItem('lzdex.intro');if(!localStorage.getItem('lzdex.intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('intro')}catch(e){}</script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -21,14 +22,17 @@
     </feComponentTransfer>
   </filter>
 </svg>
-<div class="dev" id="dev" data-pane="chat" data-side="chat">
+<div class="dev" id="dev" data-pane="chat" data-side="chat" data-snooze="idle" data-led="busy">
+  <span class="hinge" aria-hidden="true"></span>
   <header class="top">
-    <span class="lens" aria-hidden="true"></span><span class="led r"></span><span class="led y"></span><span class="led g"></span>
+    <span class="lens" aria-hidden="true"><i></i></span><span class="leds" aria-hidden="true"><span class="led r"></span><span class="led y"></span><span class="led g"></span></span>
     <h1 class="title">LAZARUS·DEX</h1>
     <button class="optBtn" id="optBtn" type="button" aria-expanded="false" aria-controls="opts" aria-label="Display options">OPT<span class="xs">IONS</span> ▾</button>
     <div class="opts" id="opts">
       <label class="sw"><input type="checkbox" id="slow" checked> <span>SLOW MODE ▸ <b id="slowLbl">ON</b></span></label>
       <label class="sw"><input type="checkbox" id="dmgT"> <span>DMG</span></label>
+      <label class="sw"><input type="checkbox" id="sndT"> <span>SOUND</span></label>
+      <button class="capbtn replay" id="replay" type="button" aria-label="Replay intro">↺ INTRO</button>
     </div>
   </header>
   <nav class="tabs" aria-label="Screens">
@@ -57,8 +61,22 @@
   <div class="controls">
     <span>✚ D-PAD</span><span>Ⓐ ASK</span><button id="nap" class="btnB" title="Nap (B)" aria-label="Nap">B</button><span>NAP</span>
   </div>
+  <span class="spk" aria-hidden="true"></span>
   <footer class="foot">Unofficial fan project. Data: <a href="https://pokemonlazarus.net/pokemon-locations/" rel="noopener">pokemonlazarus.net</a> · Sprites: <a href="https://github.com/PokeAPI/sprites" rel="noopener">PokeAPI</a></footer>
   <div class="napscreen" id="napscreen" hidden><div>Z<span>z</span><span>z</span></div><p>Prof. Snooze is napping…<br>press any key to wake</p></div>
+</div>
+<div class="boot" id="boot" role="dialog" aria-modal="true" aria-labelledby="bootT" hidden>
+  <h2 class="vh" id="bootT">Lazarus·Dex power-on</h2>
+  <div class="bootStage" id="bootStage">
+    <button class="lid" id="lid" type="button" aria-label="Open the Lazarus·Dex">
+      <span class="lidLens"><i></i></span><span class="lidLeds"><b></b><b></b><b></b></span>
+      <span class="lidTitle">LAZARUS·DEX</span><span class="lidHint">TAP THE LENS</span>
+    </button>
+  </div>
+  <div class="bootBar">
+    <button class="bootBtn power" id="power" type="button">⏻ POWER ON</button>
+    <button class="bootBtn" id="skip" type="button">SKIP INTRO ▸</button>
+  </div>
 </div>
 <script src="js/app.js"></script>
 </body>
